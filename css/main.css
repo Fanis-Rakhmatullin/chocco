@@ -242,6 +242,7 @@ img {
   width: 50%;
   line-height: 1.3;
 }
+
 .feature__item {
   display: flex;
   margin-right: 46px;
@@ -249,10 +250,12 @@ img {
 .feature__item:last-child {
   margin-right: 0;
 }
+
 .feature__icon {
   width: 45px;
   margin-right: 7px;
 }
+
 .feature__text {
   font-size: 16px;
   max-width: 85px;
@@ -295,7 +298,8 @@ img {
 .why-chocco__item:last-child::before {
   display: none;
 }
-.why-chocco__item .reason-why {
+
+.reason-why {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -303,13 +307,14 @@ img {
   align-items: center;
   position: relative;
 }
-.why-chocco__item .reason-why::before {
+.reason-why::before {
   content: url(../img/jpg/why-us/decor/sep.png);
   position: absolute;
   top: 60px;
   right: 0;
 }
-.why-chocco__item .reason-why__pic {
+
+.reason-why__pic {
   margin-bottom: 26px;
   width: 125px;
   height: 125px;
@@ -317,28 +322,32 @@ img {
   background-color: #f3f5f3;
   position: relative;
 }
-.why-chocco__item .reason-why__icon {
+
+.reason-why__icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.why-chocco__item .reason-why__title {
+
+.reason-why__title {
   font-size: 27px;
   font-weight: bold;
   margin-bottom: 15px;
   text-align: center;
 }
-.why-chocco__item .reason-why__desc {
+
+.reason-why__desc {
   color: #666666;
   font-weight: 300;
   text-align: center;
   line-height: 1.2;
 }
-.why-chocco__item .reviews {
+
+.reviews {
   padding-top: 70px;
 }
-.why-chocco__item .reviews .reviews__headline {
+.reviews .reviews__headline {
   font-size: 48px;
   font-weight: bold;
   color: black;
@@ -346,17 +355,20 @@ img {
   text-align: center;
   margin-bottom: 24px;
 }
-.why-chocco__item .reviews__switcher {
+
+.reviews__switcher {
   display: flex;
   justify-content: center;
 }
-.why-chocco__item .reviews__switcher-item {
+
+.reviews__switcher-item {
   margin-right: 12px;
 }
-.why-chocco__item .reviews__switcher-item:last-child {
+.reviews__switcher-item:last-child {
   margin-right: 0;
 }
-.why-chocco__item .review {
+
+.review {
   background: url(../img/jpg/reviews/in-ornament.png) right top no-repeat;
   background-color: #f8faf9;
   display: flex;
@@ -365,7 +377,7 @@ img {
   position: relative;
   overflow: hidden;
 }
-.why-chocco__item .review::before {
+.review::before {
   content: "";
   display: block;
   width: 90px;
@@ -377,38 +389,45 @@ img {
   transform: translate(-50%);
   top: -65px;
 }
-.why-chocco__item .review__avatar {
+
+.review__avatar {
   width: 254px;
   height: 260px;
   overflow: hidden;
   margin-right: 2.5%;
 }
-.why-chocco__item .review__img {
+
+.review__img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.why-chocco__item .review__content {
+
+.review__content {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding-top: 10px;
 }
-.why-chocco__item .review__title {
+
+.review__title {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 18px;
 }
-.why-chocco__item .review__text {
+
+.review__text {
   color: #666666;
   margin-bottom: 32px;
   line-height: 1.2;
 }
-.why-chocco__item .review__name {
+
+.review__name {
   font-weight: 500;
 }
-.why-chocco__item .interactive-avatar {
+
+.interactive-avatar {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -416,22 +435,21 @@ img {
   border: 3px solid transparent;
   position: relative;
 }
-.why-chocco__item .interactive-avatar--active, .why-chocco__item .interactive-avatar:hover {
+.interactive-avatar--active, .interactive-avatar:hover {
   border-color: #365a49;
 }
-.why-chocco__item .interactive-avatar__img {
+
+.interactive-avatar__img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.why-chocco__item .form {
+
+.form {
   display: flex;
 }
-.why-chocco__item .form:focus {
-  border-color: #dee2bd;
-  outline: none;
-}
-.why-chocco__item .form__headline {
+
+.form__headline {
   font-size: 48px;
   font-weight: bold;
   color: #365a49;
@@ -439,43 +457,52 @@ img {
   text-align: center;
   margin-bottom: 38px;
 }
-.why-chocco__item .form__col {
+
+.form__col {
   flex: 1;
   margin-right: 20px;
 }
-.why-chocco__item .form__col:last-child {
+.form__col:last-child {
   margin-right: 0;
 }
-.why-chocco__item .form__row {
+
+.form__row {
   display: flex;
   margin-bottom: 13px;
 }
-.why-chocco__item .form__row:last-child {
+.form__row:last-child {
   margin-bottom: 0;
 }
-.why-chocco__item .form__block {
+
+.form__block {
   flex: 1;
   margin-right: 20px;
 }
-.why-chocco__item .form__block:last-child {
+.form__block:last-child {
   margin-right: 0;
 }
-.why-chocco__item .form__input {
+
+.form__input {
   width: 100%;
   border: none;
   padding: 18px 11px;
   border: solid 3px transparent;
 }
-.why-chocco__item .form--textarea {
+.form__input:focus {
+  border-color: #dee2bd;
+  outline: none;
+}
+.form__input--textarea {
   height: 180px;
   resize: none;
 }
-.why-chocco__item .form__controls {
+
+.form__controls {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
-.why-chocco__item .form__controls:nth-last-child(2) {
+.form__controls:nth-last-child(2) {
   margin-bottom: 40px;
 }
 
@@ -503,7 +530,8 @@ img {
 .radio__elem:checked ~ .radio__visible:before {
   display: block;
 }
-.radio__elem__visible {
+
+.radio__visible {
   width: 26px;
   height: 26px;
   border-radius: 50%;
@@ -511,7 +539,7 @@ img {
   background: #fff;
   margin-right: 12px;
 }
-.radio__elem__visible::before {
+.radio__visible::before {
   display: none;
   content: "";
   width: 14px;
