@@ -1,9 +1,9 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding-top: 24px;
+  padding-top: rem(24px);
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: rem(100px);
 }
 
 
@@ -12,7 +12,7 @@
 }
 
 .menu__item {
-  margin-right: 27px;
+  margin-right: rem(27px);
 
   &:last-child {
     margin-right: 0;
@@ -30,12 +30,12 @@
 }
 
 .contacts__phone {
-  font-size: 24px;
+  font-size: rem(24px);
   text-decoration: none;
 
   &:before {
     content: url(../img/jpg/phone.png);
-    margin-right: 5px;
+    margin-right: rem(5px);
   }
 }
 
@@ -44,28 +44,28 @@
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
-  margin-bottom: 67px;
+  margin-bottom: rem(67px);
 }
 
 .order__headline {
   @include headline(white);
-  margin-bottom: 5px;
+  margin-bottom: rem(5px);
   line-height: 1.2;
 }
 
 .order__description {
-  font-size: 21px;
-  margin-bottom: 34px;
+  font-size: rem(21px);
+  margin-bottom: rem(34px);
   line-height: 1.2;
 }
 
 
 .btn {
   display: inline-block;
-  width: 156px;
-  font-size: 19px;
+  width: rem(156px);
+  font-size: rem(19px);
   font-weight: 800;
-  padding: 17px 0;
+  padding: rem(17px) 0;
   border-radius: 40px;
   outline: none;
   text-transform: uppercase;
@@ -98,7 +98,7 @@
 }
 
 .btn--theme--transparent {
-  width: 100px;
+  width: rem(100px);
   background: transparent;
   color: #000;
   text-transform: none;
@@ -118,7 +118,7 @@
 
 .feature__item {
   display: flex;
-  margin-right: 46px;
+  margin-right: rem(46px);
 
   &:last-child {
     margin-right: 0;
@@ -126,25 +126,25 @@
 }
 
 .feature__icon {
-  width: 45px;
-  margin-right: 7px;
+  width: rem(45px);
+  margin-right: rem(7px);
 }
 
 .feature__text {
-  font-size: 16px;
-  max-width: 85px;
+  font-size: rem(16px);
+  max-width: rem(85px);
 }
 
 .why-chocco {
-  padding-top: 100px;
-  padding-bottom: 120px;
+  padding-top: rem(100px);
+  padding-bottom: rem(120px);
 }
 
 .why-chocco__highlight {
   margin: 0 auto;
   width: 45%;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
 }
 
 .why-chocco__headline {
@@ -184,15 +184,15 @@
   &::before {
     content: url(../img/jpg/why-us/decor/sep.png);
     position: absolute;
-    top: 60px;
+    top: rem(60px);
     right: 0;
   }
 }
 
 .reason-why__pic {
-  margin-bottom: 26px;
-  width: 125px;
-  height: 125px;
+  margin-bottom: rem(26px);
+  width: rem(125px);
+  height: rem(125px);
   border-radius: 50%;
   background-color: $pale2;
   position: relative;
@@ -206,9 +206,9 @@
 }
 
 .reason-why__title {
-  font-size: 27px;
+  font-size: rem(27px);
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
   text-align: center;
 }
 
@@ -223,12 +223,12 @@
 
 
 .reviews {
-  padding-top: 70px;
+  padding-top: rem(70px);
 
   .reviews__headline {
     @include headline();
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: rem(24px);
   }
 }
 
@@ -238,7 +238,7 @@
 }
 
 .reviews__switcher-item {
-  margin-right: 12px;
+  margin-right: rem(12px);
 
   &:last-child {
     margin-right: 0;
@@ -250,28 +250,28 @@
   background: url(../img/jpg/reviews/in-ornament.png) right top no-repeat;
   background-color: #f8faf9;
   display: flex;
-  padding: 51px 180px 35px 46px;
-  margin-bottom: 20px;
+  padding: rem(51px) rem(180px) rem(35px) rem(46px);
+  margin-bottom: rem(20px);
   position: relative;
   overflow: hidden;
 
   &::before {
     content: "";
     display: block;
-    width: 90px;
-    height: 90px;
+    width: rem(90px);
+    height: rem(90px);
     background: #fff;
     border-radius: 50%;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    top: -65px;
+    top: rem(-65px);
   }
 }
 
 .review__avatar {
-  width: 254px;
-  height: 260px;
+  width: rem(254px);
+  height: rem(260px);
   overflow: hidden;
   margin-right: 2.5%;
 }
@@ -287,19 +287,19 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 10px;
+  padding-top: rem(10px);
 }
 
 .review__title {
-  font-size: 30px;
+  font-size: rem(30px);
   font-weight: bold;
-  margin-bottom: 18px;
+  margin-bottom: rem(18px);
 
 }
 
 .review__text {
   color: $grey;
-  margin-bottom: 32px;
+  margin-bottom: rem(32px);
   line-height: 1.2;
 }
 
@@ -310,11 +310,11 @@
 
 
 .interactive-avatar {
-  width: 80px;
-  height: 80px;
+  width: rem(80px);
+  height: rem(80px);
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid transparent;
+  border: rem(3px) solid transparent;
   position: relative;
 
   &--active,
@@ -337,12 +337,12 @@
 .form__headline {
   @include headline($green);
   text-align: center;
-  margin-bottom: 38px;
+  margin-bottom: rem(38px);
 }
 
 .form__col {
   flex: 1;
-  margin-right: 20px;
+  margin-right: rem(20px);
 
   &:last-child {
     margin-right: 0;
@@ -351,7 +351,7 @@
 
 .form__row {
   display: flex;
-  margin-bottom: 13px;
+  margin-bottom: rem(13px);
 
   &:last-child {
     margin-bottom: 0;
@@ -360,7 +360,7 @@
 
 .form__block {
   flex: 1;
-  margin-right: 20px;
+  margin-right: rem(20px);
 
   &:last-child {
     margin-right: 0;
@@ -370,8 +370,8 @@
 .form__input {
   width: 100%;
   border: none;
-  padding: 18px 11px;
-  border: solid 3px transparent;
+  padding: rem(18px) rem(11px);
+  border: solid rem(3px) transparent;
 
   &:focus {
     border-color: #dee2bd;
@@ -379,7 +379,7 @@
   }
 
   &--textarea {
-    height: 180px;
+    height: rem(180px);
     resize: none;
   }
 }
@@ -388,10 +388,10 @@
 .form__controls {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
 
   &:nth-last-child(2) {
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
   }
 }
 
@@ -401,7 +401,7 @@
   display: flex;
   cursor: pointer;
   user-select: none;
-  margin-right: 18px;
+  margin-right: rem(18px);
 
   &:last-child {
     margin-right: 0;
@@ -429,18 +429,18 @@
 }
 
 .radio__visible {
-  width: 26px;
-  height: 26px;
+  width: rem(26px);
+  height: rem(26px);
   border-radius: 50%;
   position: relative;
   background: #fff;
-  margin-right: 12px;
+  margin-right: rem(12px);
 
   &::before {
     display: none;
     content: "";
-    width: 14px;
-    height: 14px;
+    width: rem(14px);
+    height: rem(14px);
     background: $green;
     border-radius: 50%;
     position: absolute;
@@ -459,7 +459,7 @@
 }
 
 .fixed-menu__item {
-  margin-bottom: 5px;
+  margin-bottom: rem(5px);
 
   &:last-child {
     margin-bottom: 0;
@@ -474,18 +474,18 @@
 }
 
 .fixed-menu__link {
-  width: 16px;
-  height: 16px;
+  width: rem(16px);
+  height: rem(16px);
   border-radius: 50%;
-  border: 1px solid transparent;
+  border: rem(1px) solid transparent;
   display: block;
   position: relative;
 
   &::before {
     content: "";
     display: block;
-    width: 6px;
-    height: 6px;
+    width: rem(6px);
+    height: rem(6px);
     border-radius: 50%;
     background: #fff;
     position: absolute;

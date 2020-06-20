@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 html, body {
   height: 100%;
 }
@@ -11,7 +25,6 @@ html, body {
 body {
   font-family: "alegreya_sans", Helvetica, sans-serif;
   color: black;
-  font-size: 18px;
   background: #fff;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
@@ -58,7 +71,6 @@ img {
 }
 
 .wrapper {
-  min-width: 1100px;
   min-height: 100%;
   overflow: hidden;
   display: flex;
@@ -66,7 +78,7 @@ img {
 }
 
 .section {
-  min-height: 650px;
+  min-height: 36.1111111111rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -78,18 +90,18 @@ img {
   background: url(../img/jpg/decor/ornament.png) right bottom no-repeat;
   background-color: #86c3d7;
   color: white;
-  padding-bottom: 45px;
+  padding-bottom: 2.5rem;
 }
 .section-hero:before {
   content: url(../img/jpg/decor/leaf.png);
   position: absolute;
-  bottom: -40px;
+  bottom: -2.2222222222rem;
   left: 2%;
 }
 .section-hero:after {
   content: url(../img/jpg/decor/berries.png);
   position: absolute;
-  bottom: -40px;
+  bottom: -2.2222222222rem;
   right: 0;
 }
 .section-why {
@@ -99,7 +111,7 @@ img {
   content: url(../img/jpg/why-us/decor/berry.png);
   position: absolute;
   left: 0;
-  bottom: -80px;
+  bottom: -4.4444444444rem;
 }
 .section-review {
   background: url(../img/jpg/reviews/top-berries.png) right 10% top 13% no-repeat;
@@ -108,22 +120,23 @@ img {
   content: url(../img/jpg/reviews/bot-berries.png);
   position: absolute;
   left: 0;
-  bottom: -100px;
+  bottom: -5.5555555556rem;
 }
 .section-form {
-  background: url(../img/jpg/form/leaf.png) right bottom 80px no-repeat, url(../img/jpg/form/bot-berry.png) left 2% bottom 80px no-repeat, url(../img/jpg/form/pattern.png) center center/100% no-repeat;
+  background: url(../img/jpg/form/leaf.png) right bottom 4.4444444444rem no-repeat, url(../img/jpg/form/bot-berry.png) left 2% bottom 4.4444444444rem no-repeat, url(../img/jpg/form/pattern.png) center center/100% no-repeat;
   color: #365a49;
 }
 .section-form::before {
   content: url(../img/jpg/form/top-berry.png);
   position: absolute;
-  right: -78px;
-  top: -168px;
+  right: -4.3333333333rem;
+  top: -9.3333333333rem;
 }
 
 .container {
   margin: 0 auto;
-  width: 940px;
+  width: 95%;
+  max-width: 940px;
   position: relative;
 }
 .container-hero {
@@ -137,9 +150,9 @@ img {
 .header {
   display: flex;
   justify-content: space-between;
-  padding-top: 24px;
+  padding-top: 1.3333333333rem;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 5.5555555556rem;
 }
 
 .menu__list {
@@ -147,7 +160,7 @@ img {
 }
 
 .menu__item {
-  margin-right: 27px;
+  margin-right: 1.5rem;
 }
 .menu__item:last-child {
   margin-right: 0;
@@ -162,12 +175,12 @@ img {
 }
 
 .contacts__phone {
-  font-size: 24px;
+  font-size: 1.3333333333rem;
   text-decoration: none;
 }
 .contacts__phone:before {
   content: url(../img/jpg/phone.png);
-  margin-right: 5px;
+  margin-right: 0.2777777778rem;
 }
 
 .order {
@@ -175,30 +188,30 @@ img {
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
-  margin-bottom: 67px;
+  margin-bottom: 3.7222222222rem;
 }
 
 .order__headline {
-  font-size: 48px;
+  font-size: 2.6666666667rem;
   font-weight: bold;
   color: white;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: 0.2777777778rem;
   line-height: 1.2;
 }
 
 .order__description {
-  font-size: 21px;
-  margin-bottom: 34px;
+  font-size: 1.1666666667rem;
+  margin-bottom: 1.8888888889rem;
   line-height: 1.2;
 }
 
 .btn {
   display: inline-block;
-  width: 156px;
-  font-size: 19px;
+  width: 8.6666666667rem;
+  font-size: 1.0555555556rem;
   font-weight: 800;
-  padding: 17px 0;
+  padding: 0.9444444444rem 0;
   border-radius: 40px;
   outline: none;
   text-transform: uppercase;
@@ -228,7 +241,7 @@ img {
 }
 
 .btn--theme--transparent {
-  width: 100px;
+  width: 5.5555555556rem;
   background: transparent;
   color: #000;
   text-transform: none;
@@ -245,36 +258,36 @@ img {
 
 .feature__item {
   display: flex;
-  margin-right: 46px;
+  margin-right: 2.5555555556rem;
 }
 .feature__item:last-child {
   margin-right: 0;
 }
 
 .feature__icon {
-  width: 45px;
-  margin-right: 7px;
+  width: 2.5rem;
+  margin-right: 0.3888888889rem;
 }
 
 .feature__text {
-  font-size: 16px;
-  max-width: 85px;
+  font-size: 0.8888888889rem;
+  max-width: 4.7222222222rem;
 }
 
 .why-chocco {
-  padding-top: 100px;
-  padding-bottom: 120px;
+  padding-top: 5.5555555556rem;
+  padding-bottom: 6.6666666667rem;
 }
 
 .why-chocco__highlight {
   margin: 0 auto;
   width: 45%;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 2.7777777778rem;
 }
 
 .why-chocco__headline {
-  font-size: 48px;
+  font-size: 2.6666666667rem;
   font-weight: bold;
   color: black;
   text-transform: uppercase;
@@ -310,14 +323,14 @@ img {
 .reason-why::before {
   content: url(../img/jpg/why-us/decor/sep.png);
   position: absolute;
-  top: 60px;
+  top: 3.3333333333rem;
   right: 0;
 }
 
 .reason-why__pic {
-  margin-bottom: 26px;
-  width: 125px;
-  height: 125px;
+  margin-bottom: 1.4444444444rem;
+  width: 6.9444444444rem;
+  height: 6.9444444444rem;
   border-radius: 50%;
   background-color: #f3f5f3;
   position: relative;
@@ -331,9 +344,9 @@ img {
 }
 
 .reason-why__title {
-  font-size: 27px;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 0.8333333333rem;
   text-align: center;
 }
 
@@ -345,15 +358,15 @@ img {
 }
 
 .reviews {
-  padding-top: 70px;
+  padding-top: 3.8888888889rem;
 }
 .reviews .reviews__headline {
-  font-size: 48px;
+  font-size: 2.6666666667rem;
   font-weight: bold;
   color: black;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 1.3333333333rem;
 }
 
 .reviews__switcher {
@@ -362,7 +375,7 @@ img {
 }
 
 .reviews__switcher-item {
-  margin-right: 12px;
+  margin-right: 0.6666666667rem;
 }
 .reviews__switcher-item:last-child {
   margin-right: 0;
@@ -372,27 +385,27 @@ img {
   background: url(../img/jpg/reviews/in-ornament.png) right top no-repeat;
   background-color: #f8faf9;
   display: flex;
-  padding: 51px 180px 35px 46px;
-  margin-bottom: 20px;
+  padding: 2.8333333333rem 10rem 1.9444444444rem 2.5555555556rem;
+  margin-bottom: 1.1111111111rem;
   position: relative;
   overflow: hidden;
 }
 .review::before {
   content: "";
   display: block;
-  width: 90px;
-  height: 90px;
+  width: 5rem;
+  height: 5rem;
   background: #fff;
   border-radius: 50%;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  top: -65px;
+  top: -3.6111111111rem;
 }
 
 .review__avatar {
-  width: 254px;
-  height: 260px;
+  width: 14.1111111111rem;
+  height: 14.4444444444rem;
   overflow: hidden;
   margin-right: 2.5%;
 }
@@ -408,18 +421,18 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 10px;
+  padding-top: 0.5555555556rem;
 }
 
 .review__title {
-  font-size: 30px;
+  font-size: 1.6666666667rem;
   font-weight: bold;
-  margin-bottom: 18px;
+  margin-bottom: 1rem;
 }
 
 .review__text {
   color: #666666;
-  margin-bottom: 32px;
+  margin-bottom: 1.7777777778rem;
   line-height: 1.2;
 }
 
@@ -428,11 +441,11 @@ img {
 }
 
 .interactive-avatar {
-  width: 80px;
-  height: 80px;
+  width: 4.4444444444rem;
+  height: 4.4444444444rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid transparent;
+  border: 0.1666666667rem solid transparent;
   position: relative;
 }
 .interactive-avatar--active, .interactive-avatar:hover {
@@ -450,17 +463,17 @@ img {
 }
 
 .form__headline {
-  font-size: 48px;
+  font-size: 2.6666666667rem;
   font-weight: bold;
   color: #365a49;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 38px;
+  margin-bottom: 2.1111111111rem;
 }
 
 .form__col {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 1.1111111111rem;
 }
 .form__col:last-child {
   margin-right: 0;
@@ -468,7 +481,7 @@ img {
 
 .form__row {
   display: flex;
-  margin-bottom: 13px;
+  margin-bottom: 0.7222222222rem;
 }
 .form__row:last-child {
   margin-bottom: 0;
@@ -476,7 +489,7 @@ img {
 
 .form__block {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 1.1111111111rem;
 }
 .form__block:last-child {
   margin-right: 0;
@@ -485,25 +498,25 @@ img {
 .form__input {
   width: 100%;
   border: none;
-  padding: 18px 11px;
-  border: solid 3px transparent;
+  padding: 1rem 0.6111111111rem;
+  border: solid 0.1666666667rem transparent;
 }
 .form__input:focus {
   border-color: #dee2bd;
   outline: none;
 }
 .form__input--textarea {
-  height: 180px;
+  height: 10rem;
   resize: none;
 }
 
 .form__controls {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10px;
+  margin-bottom: 0.5555555556rem;
 }
 .form__controls:nth-last-child(2) {
-  margin-bottom: 40px;
+  margin-bottom: 2.2222222222rem;
 }
 
 .radio {
@@ -511,7 +524,7 @@ img {
   cursor: pointer;
   -webkit-user-select: none;
           user-select: none;
-  margin-right: 18px;
+  margin-right: 1rem;
 }
 .radio:last-child {
   margin-right: 0;
@@ -532,18 +545,18 @@ img {
 }
 
 .radio__visible {
-  width: 26px;
-  height: 26px;
+  width: 1.4444444444rem;
+  height: 1.4444444444rem;
   border-radius: 50%;
   position: relative;
   background: #fff;
-  margin-right: 12px;
+  margin-right: 0.6666666667rem;
 }
 .radio__visible::before {
   display: none;
   content: "";
-  width: 14px;
-  height: 14px;
+  width: 0.7777777778rem;
+  height: 0.7777777778rem;
   background: #365a49;
   border-radius: 50%;
   position: absolute;
@@ -560,7 +573,7 @@ img {
 }
 
 .fixed-menu__item {
-  margin-bottom: 5px;
+  margin-bottom: 0.2777777778rem;
 }
 .fixed-menu__item:last-child {
   margin-bottom: 0;
@@ -570,18 +583,18 @@ img {
 }
 
 .fixed-menu__link {
-  width: 16px;
-  height: 16px;
+  width: 0.8888888889rem;
+  height: 0.8888888889rem;
   border-radius: 50%;
-  border: 1px solid transparent;
+  border: 0.0555555556rem solid transparent;
   display: block;
   position: relative;
 }
 .fixed-menu__link::before {
   content: "";
   display: block;
-  width: 6px;
-  height: 6px;
+  width: 0.3333333333rem;
+  height: 0.3333333333rem;
   border-radius: 50%;
   background: #fff;
   position: absolute;

@@ -2,6 +2,17 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: $baseFontSize;
+
+  @include tablets {
+    font-size: ($baseFontSize - 1px);
+  }
+  @include phones {
+    font-size: ($baseFontSize - 2px);
+  }
+}
+
 html, body {
   height: 100%;
 }
@@ -9,7 +20,6 @@ html, body {
 body {
   font-family: "alegreya_sans", Helvetica, sans-serif;
   color: black;
-  font-size: $baseFontSize;
   background: #fff;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
@@ -57,7 +67,7 @@ img {
 
 
 .wrapper {
-  min-width: 1100px;
+  // min-width: 1100px;
   min-height: 100%;
   overflow: hidden;
   display: flex;
@@ -65,7 +75,7 @@ img {
 }
 
 .section {
-  min-height: 650px;
+  min-height: rem(650px);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -77,18 +87,18 @@ img {
   background: url(../img/jpg/decor/ornament.png) right bottom no-repeat;
   background-color: $blueBg;
   color: white;
-  padding-bottom: 45px;
+  padding-bottom: rem(45px);
     &:before {
     content: url(../img/jpg/decor/leaf.png);
     position: absolute;
-    bottom: -40px;
+    bottom: rem(-40px);
     left: 2%;
   }
 
   &:after {
     content: url(../img/jpg/decor/berries.png);
     position: absolute;
-    bottom: -40px;
+    bottom: rem(-40px);
     right: 0;
     }
   }
@@ -98,7 +108,7 @@ img {
     content: url(../img/jpg/why-us/decor/berry.png);
     position: absolute;
     left: 0;
-    bottom: -80px;
+    bottom: rem(-80px);
     }
   }
   &-review {
@@ -108,27 +118,28 @@ img {
     content: url(../img/jpg/reviews/bot-berries.png);
     position: absolute;
     left: 0;
-    bottom: -100px;
+    bottom: rem(-100px);
     }
   }
   &-form {
-    background: url(../img/jpg/form/leaf.png) right bottom 80px no-repeat,
-    url(../img/jpg/form/bot-berry.png) left 2% bottom 80px no-repeat,
+    background: url(../img/jpg/form/leaf.png) right bottom rem(80px) no-repeat,
+    url(../img/jpg/form/bot-berry.png) left 2% bottom rem(80px) no-repeat,
     url(../img/jpg/form/pattern.png) center center / 100% no-repeat;
     color: $green;
 
     &::before {
       content: url(../img/jpg/form/top-berry.png);
       position: absolute;
-      right: -78px;
-      top: -168px;
+      right: rem(-78px);
+      top: rem(-168px);
     }
   }
 }
 
 .container {
   margin: 0 auto;
-  width: $containerWidth;
+  width: 95%;
+  max-width: $containerWidth;
   position: relative;
   &-hero {
     display: flex;

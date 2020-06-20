@@ -18,23 +18,33 @@ $z-fixed-menu: 100;
 $baseFontSize: 18px;
 $containerWidth: 940px;
 
+// breakpoints
+$breakpoints: (
+  'tablets': 768px,
+  'phones': 480px,
+);
+
+// media querie file:
+@import 'media';
+
+
 // mixins
 //// mixin for headlines in sections
 @mixin headline ($color: black) {
-  font-size: 48px;
+  font-size: rem(48px);
   font-weight: bold;
   color: $color;
   text-transform: uppercase;
 }
 
-//normalize 
+// normalize 
 @import url('setups/normalize.css');
 
-//base layout and fonts
+// base layout and fonts
 @import url('setups/fonts.css');
 @import 'setups/layout';
 
-//components
+// components
 //// temporary file for styles 
 @import 'components/basic'
 
