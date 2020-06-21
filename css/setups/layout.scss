@@ -8,12 +8,14 @@ html {
   @include tablets {
     font-size: ($baseFontSize - 1px);
   }
+
   @include phones {
     font-size: ($baseFontSize - 2px);
   }
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -39,13 +41,18 @@ ul li {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   font-weight: normal;
 }
 
 p {
-margin: 0;
+  margin: 0;
 }
 
 button {
@@ -83,48 +90,72 @@ img {
   justify-content: center;
   color: black;
 
-&-hero {
-  background: url(../img/jpg/decor/ornament.png) right bottom no-repeat;
-  background-color: $blueBg;
-  color: white;
-  padding-bottom: rem(45px);
+  &-hero {
+    background: url(../img/jpg/decor/ornament.png) right bottom no-repeat;
+    background-color: $blueBg;
+    color: white;
+    padding-bottom: rem(45px);
+
+    @include tablets {
+      background-position: right bottom 80%;
+    }
+
+    &::before,
+    &::after {
+      @include tablets {
+        display: none;
+      }
+    }
+
     &:before {
-    content: url(../img/jpg/decor/leaf.png);
-    position: absolute;
-    bottom: rem(-40px);
-    left: 2%;
+      content: url(../img/jpg/decor/leaf.png);
+      position: absolute;
+      bottom: rem(-40px);
+      left: 2%;
+    }
+
+    &:after {
+      content: url(../img/jpg/decor/berries.png);
+      position: absolute;
+      bottom: rem(-40px);
+      right: 0;
+    }
   }
 
-  &:after {
-    content: url(../img/jpg/decor/berries.png);
-    position: absolute;
-    bottom: rem(-40px);
-    right: 0;
+  &-why {
+    background: url(../img/jpg/why-us/decor/leaf-orn.png) left top 50% no-repeat;
+
+    @include tablets {
+      background-position: left top 12%;
     }
-  }
- &-why {
-   background: url(../img/jpg/why-us/decor/leaf-orn.png) left top 50% no-repeat;
-  &::before {
-    content: url(../img/jpg/why-us/decor/berry.png);
-    position: absolute;
-    left: 0;
-    bottom: rem(-80px);
-    }
-  }
-  &-review {
-    background: url(../img/jpg/reviews/top-berries.png) right 10% top 13% no-repeat;
-  
     &::before {
-    content: url(../img/jpg/reviews/bot-berries.png);
-    position: absolute;
-    left: 0;
-    bottom: rem(-100px);
+      content: url(../img/jpg/why-us/decor/berry.png);
+      position: absolute;
+      left: 0;
+      bottom: rem(-80px);
     }
   }
+
+  &-review {
+    background: url(../img/jpg/reviews/top-berries.png) right -6% top 9% no-repeat;
+
+    &::before {
+      content: url(../img/jpg/reviews/bot-berries.png);
+      position: absolute;
+      left: 0;
+      bottom: rem(-100px);
+
+      @include tablets {
+        left: -2rem;
+        bottom: -9rem;
+      }
+    }
+  }
+
   &-form {
     background: url(../img/jpg/form/leaf.png) right bottom rem(80px) no-repeat,
-    url(../img/jpg/form/bot-berry.png) left 2% bottom rem(80px) no-repeat,
-    url(../img/jpg/form/pattern.png) center center / 100% no-repeat;
+      url(../img/jpg/form/bot-berry.png) left 2% bottom rem(80px) no-repeat,
+      url(../img/jpg/form/pattern.png) center center / 100% no-repeat;
     color: $green;
 
     &::before {
@@ -141,12 +172,25 @@ img {
   width: 95%;
   max-width: $containerWidth;
   position: relative;
+
   &-hero {
+    height: 100%;
+    background: url(../img/jpg/decor/choch.png) right center / 50% auto no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include tablets {
+      background: none;
+      justify-content: flex-start;
+    }
+  }
+
+
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 100%;
-    background: url(../img/jpg/decor/choch.png) right center / 50% auto no-repeat;
   }
 }
-
