@@ -88,7 +88,7 @@
     text-align: center;
 
     &::before {
-      content: url(../../img/jpg/tablets/hero-bg.png);
+      content: url(../img/jpg/tablets/hero-bg.png);
     }
   }
 }
@@ -637,12 +637,12 @@
   .social-nets__link {
     width: 23px;
     height: 23px;
-    background: url(../../img/jpg/socials/vk.png) center center no-repeat;
+    background: url(../img/jpg/socials/vk.png) center center no-repeat;
     opacity: 30%;
     transition: 0.3s;
 
     &:hover {
-      background: url(../../img/jpg/socials/vk.png) center center no-repeat;
+      background: url(../img/jpg/socials/vk.png) center center no-repeat;
       opacity: 100%;
     }
   }
@@ -652,12 +652,12 @@
   .social-nets__link {
     width: 23px;
     height: 23px;
-    background: url(../../img/jpg/socials/fb.png) center center no-repeat;
+    background: url(../img/jpg/socials/fb.png) center center no-repeat;
     opacity: 30%;
     transition: 0.3s;
 
     &:hover {
-      background: url(../../img/jpg/socials/fb.png) center center no-repeat;
+      background: url(../img/jpg/socials/fb.png) center center no-repeat;
       opacity: 100%;
     }
   }
@@ -667,12 +667,12 @@
   .social-nets__link {
     width: 23px;
     height: 23px;
-    background: url(../../img/jpg/socials/ig.png) center center no-repeat;
+    background: url(../img/jpg/socials/ig.png) center center no-repeat;
     opacity: 30%;
     transition: 0.3s;
 
     &:hover {
-      background: url(../../img/jpg/socials/ig.png) center center no-repeat;
+      background: url(../img/jpg/socials/ig.png) center center no-repeat;
       opacity: 100%;
     }
   }
@@ -682,12 +682,12 @@
   .social-nets__link {
     width: 23px;
     height: 23px;
-    background: url(../../img/jpg/socials/tw.png) center center no-repeat;
+    background: url(../img/jpg/socials/tw.png) center center no-repeat;
     opacity: 30%;
     transition: 0.3s;
 
     &:hover {
-      background: url(../../img/jpg/socials/tw.png) center center no-repeat;
+      background: url(../img/jpg/socials/tw.png) center center no-repeat;
       opacity: 100%;
     }
   }

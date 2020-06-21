@@ -273,7 +273,7 @@ img {
     text-align: center;
   }
   .order::before {
-    content: url(../../img/jpg/tablets/hero-bg.png);
+    content: url(../img/jpg/tablets/hero-bg.png);
   }
 }
 
@@ -793,48 +793,48 @@ img {
 .social-nets_icon_vk .social-nets__link {
   width: 23px;
   height: 23px;
-  background: url(../../img/jpg/socials/vk.png) center center no-repeat;
+  background: url(../img/jpg/socials/vk.png) center center no-repeat;
   opacity: 30%;
   transition: 0.3s;
 }
 .social-nets_icon_vk .social-nets__link:hover {
-  background: url(../../img/jpg/socials/vk.png) center center no-repeat;
+  background: url(../img/jpg/socials/vk.png) center center no-repeat;
   opacity: 100%;
 }
 
 .social-nets_icon_fb .social-nets__link {
   width: 23px;
   height: 23px;
-  background: url(../../img/jpg/socials/fb.png) center center no-repeat;
+  background: url(../img/jpg/socials/fb.png) center center no-repeat;
   opacity: 30%;
   transition: 0.3s;
 }
 .social-nets_icon_fb .social-nets__link:hover {
-  background: url(../../img/jpg/socials/fb.png) center center no-repeat;
+  background: url(../img/jpg/socials/fb.png) center center no-repeat;
   opacity: 100%;
 }
 
 .social-nets_icon_ig .social-nets__link {
   width: 23px;
   height: 23px;
-  background: url(../../img/jpg/socials/ig.png) center center no-repeat;
+  background: url(../img/jpg/socials/ig.png) center center no-repeat;
   opacity: 30%;
   transition: 0.3s;
 }
 .social-nets_icon_ig .social-nets__link:hover {
-  background: url(../../img/jpg/socials/ig.png) center center no-repeat;
+  background: url(../img/jpg/socials/ig.png) center center no-repeat;
   opacity: 100%;
 }
 
 .social-nets_icon_tw .social-nets__link {
   width: 23px;
   height: 23px;
-  background: url(../../img/jpg/socials/tw.png) center center no-repeat;
+  background: url(../img/jpg/socials/tw.png) center center no-repeat;
   opacity: 30%;
   transition: 0.3s;
 }
 .social-nets_icon_tw .social-nets__link:hover {
-  background: url(../../img/jpg/socials/tw.png) center center no-repeat;
+  background: url(../img/jpg/socials/tw.png) center center no-repeat;
   opacity: 100%;
 }
 
