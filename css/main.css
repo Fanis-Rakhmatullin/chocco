@@ -150,14 +150,25 @@ img {
   }
 }
 .section-form {
-  background: url(../img/jpg/form/leaf.png) right bottom 4.4444444444rem no-repeat, url(../img/jpg/form/bot-berry.png) left 2% bottom 4.4444444444rem no-repeat, url(../img/jpg/form/pattern.png) center center/100% no-repeat;
+  background: url(../img/jpg/form/leaf.png) right bottom 4.4444444444rem no-repeat, url(../img/jpg/form/bot-berry.png) left 2% bottom 4.4444444444rem no-repeat, url(../img/jpg/form/pattern.png) center center/cover no-repeat;
   color: #365a49;
+}
+@media screen and (max-width: 768px) {
+  .section-form {
+    background: url(../img/jpg/form/pattern.png) center center/cover no-repeat;
+    color: #365a49;
+  }
 }
 .section-form::before {
   content: url(../img/jpg/form/top-berry.png);
   position: absolute;
   right: -4.3333333333rem;
   top: -9.3333333333rem;
+}
+@media screen and (max-width: 768px) {
+  .section-form::before {
+    transform: scale(0.6);
+  }
 }
 
 .container {
@@ -176,7 +187,6 @@ img {
 @media screen and (max-width: 768px) {
   .container-hero {
     background: none;
-    justify-content: flex-start;
   }
 }
 .container-footer {
@@ -191,12 +201,6 @@ img {
   justify-content: space-between;
   padding-top: 1.3333333333rem;
   align-items: center;
-  margin-bottom: 5.5555555556rem;
-}
-@media screen and (max-width: 768px) {
-  .header {
-    margin-bottom: 7.5rem;
-  }
 }
 
 .menu {
@@ -261,7 +265,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
-  margin-bottom: 3.7222222222rem;
+  padding-bottom: 9.3rem;
 }
 @media screen and (max-width: 768px) {
   .order {
@@ -604,6 +608,12 @@ img {
 .form {
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .form {
+    flex-direction: column;
+    padding: 0 18%;
+  }
+}
 
 .form__headline {
   font-size: 48px;
@@ -618,8 +628,15 @@ img {
   flex: 1;
   margin-right: 1.1111111111rem;
 }
+@media screen and (max-width: 768px) {
+  .form__col {
+    margin-right: 0;
+    margin-bottom: 0.7222222222rem;
+  }
+}
 .form__col:last-child {
   margin-right: 0;
+  margin-bottom: 0;
 }
 
 .form__row {
@@ -644,6 +661,11 @@ img {
   padding: 1rem 0.6111111111rem;
   border: solid 0.1666666667rem transparent;
 }
+@media screen and (max-width: 768px) {
+  .form__input {
+    padding: 0.2777777778rem 0.6111111111rem;
+  }
+}
 .form__input:focus {
   border-color: #dee2bd;
   outline: none;
@@ -651,6 +673,12 @@ img {
 .form__input--textarea {
   height: 10rem;
   resize: none;
+}
+@media screen and (max-width: 768px) {
+  .form__input--textarea {
+    margin-right: 0;
+    height: 5rem;
+  }
 }
 
 .form__controls {
@@ -660,6 +688,14 @@ img {
 }
 .form__controls:nth-last-child(2) {
   margin-bottom: 2.2222222222rem;
+}
+
+.form__btns {
+  display: flex;
+  justify-content: center;
+}
+.form__btns input:not(:last-child) {
+  margin-right: 10px;
 }
 
 .radio {

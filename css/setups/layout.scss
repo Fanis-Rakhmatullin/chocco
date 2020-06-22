@@ -155,14 +155,23 @@ img {
   &-form {
     background: url(../img/jpg/form/leaf.png) right bottom rem(80px) no-repeat,
       url(../img/jpg/form/bot-berry.png) left 2% bottom rem(80px) no-repeat,
-      url(../img/jpg/form/pattern.png) center center / 100% no-repeat;
+      url(../img/jpg/form/pattern.png) center center / cover no-repeat;
     color: $green;
+
+    @include tablets {
+      background: url(../img/jpg/form/pattern.png) center center / cover no-repeat;
+      color: $green;
+    }
 
     &::before {
       content: url(../img/jpg/form/top-berry.png);
       position: absolute;
       right: rem(-78px);
       top: rem(-168px);
+
+      @include tablets {
+        transform: scale(0.6);
+      }
     }
   }
 }
@@ -182,7 +191,6 @@ img {
 
     @include tablets {
       background: none;
-      justify-content: flex-start;
     }
   }
 
