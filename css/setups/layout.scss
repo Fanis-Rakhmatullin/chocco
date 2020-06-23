@@ -74,7 +74,6 @@ img {
 
 
 .wrapper {
-  // min-width: 1100px;
   min-height: 100%;
   overflow: hidden;
   display: flex;
@@ -90,6 +89,10 @@ img {
   justify-content: center;
   color: black;
 
+  @include tablets {
+    min-height: rem(568px);
+  }
+
   &-hero {
     background: url(../img/jpg/decor/ornament.png) right bottom no-repeat;
     background-color: $blueBg;
@@ -98,6 +101,11 @@ img {
 
     @include tablets {
       background-position: right bottom 80%;
+    }
+
+    @include phones {
+      background-position: right 5% bottom 80%;
+      background-size: 80%;
     }
 
     &::before,
@@ -128,17 +136,25 @@ img {
     @include tablets {
       background-position: left top 12%;
     }
+
+    @include phones {
+      background: none;
+    }
+
     &::before {
       content: url(../img/jpg/why-us/decor/berry.png);
       position: absolute;
       left: 0;
       bottom: rem(-80px);
+
+      @include phones {
+        display: none;
+      }
     }
   }
 
   &-review {
-    background: url(../img/jpg/reviews/top-berries.png) right -6% top 9% no-repeat;
-
+    background: url(../img/jpg/reviews/top-berries.png) right -15% top 0% / 35% no-repeat;
     &::before {
       content: url(../img/jpg/reviews/bot-berries.png);
       position: absolute;
@@ -148,6 +164,12 @@ img {
       @include tablets {
         left: -2rem;
         bottom: -9rem;
+      }
+
+      @include phones {
+        left: -2rem;
+        bottom: -9rem;
+        transform: scale(0.5);
       }
     }
   }
@@ -166,11 +188,15 @@ img {
     &::before {
       content: url(../img/jpg/form/top-berry.png);
       position: absolute;
-      right: rem(-78px);
+      right: rem(-90px);
       top: rem(-168px);
 
       @include tablets {
         transform: scale(0.6);
+      }
+
+      @include tablets {
+        transform: scale(0.45);
       }
     }
   }
@@ -200,5 +226,10 @@ img {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    @include phones {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }

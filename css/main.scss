@@ -15,6 +15,7 @@
 
 
 $z-fixed-menu: 100;
+$z-index-interactive-avatar: 50;
 $baseFontSize: 18px;
 $containerWidth: 940px;
 
@@ -27,15 +28,6 @@ $breakpoints: (
 // media querie file:
 @import 'media';
 
-
-// mixins
-//// mixin for headlines in sections
-@mixin headline ($color: black, $font-size: 48px) {
-  font-size: $font-size;
-  font-weight: bold;
-  color: $color;
-  text-transform: uppercase;
-}
 
 // normalize 
 @import url('setups/normalize.css');
