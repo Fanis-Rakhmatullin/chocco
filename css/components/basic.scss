@@ -38,33 +38,33 @@
 .contacts {
   flex-shrink: 0;
 
+  &--header {
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &--footer {
+    @include phones {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   &:hover {
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   }
 
-  @include phones {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 .contacts__phone {
   font-style: normal;
   text-decoration: none;
 
-  &:before {
-    content: url(../img/jpg/phone.png);
-    margin-right: rem(5px);
-  }
-
   &--header {
     font-size: rem(24px);
     white-space: nowrap;
-
-    @include tablets {
-      display: none;
-    }
   }
 
   &--footer {
@@ -73,16 +73,37 @@
   }
 }
 
+.phone-icon {
+  width: 12px;
+  height: 12px;
+  fill: white;
+
+  &--footer {
+    fill: $green;
+  }
+}
+
 .section-headline {
   font-size: 48px;
   font-weight: bold;
   color: black;
   text-transform: uppercase;
-  
+
 
   @include phones {
     font-size: rem(40px);
     line-height: 1.1;
+  }
+}
+
+.hero-content {
+
+  @include tablets {
+    padding-bottom: 9.3rem;
+  }
+
+  @include phones {
+    padding-bottom: rem(80px);
   }
 }
 
@@ -99,7 +120,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-bottom: 9.3rem;
 
     &::before {
       content: "";
@@ -110,7 +130,6 @@
   }
 
   @include phones {
-    padding-bottom: 0;
 
     &::before {
       width: 60vw;
@@ -130,6 +149,8 @@
 
   @include phones {
     font-size: rem(40px);
+    max-width: 90%;
+    margin-bottom: rem(8px);
   }
 }
 
@@ -221,12 +242,23 @@
 
 .feature__icon {
   width: rem(45px);
+  height: rem(45px);
+  fill: #c6f7ff;
   margin-right: rem(7px);
 }
 
 .feature__text {
   font-size: rem(16px);
   max-width: rem(85px);
+}
+
+.why-chocco {
+  @include phones {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 
@@ -236,7 +268,7 @@
   text-align: center;
 
   @include phones {
-    padding: 0 10%;
+    padding: 0 8%;
     margin-bottom: 2vh;
     line-height: 1.1;
   }
@@ -250,9 +282,11 @@
   display: flex;
   justify-content: space-between;
 
+
   @include phones {
     flex-direction: column;
     align-items: center;
+    height: 70%;
   }
 }
 
@@ -325,6 +359,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+
+
+  @include phones {
+    max-width: 70%;
+  }
 }
 
 .reason-why__text {
@@ -360,10 +401,23 @@
 }
 
 
-// .reviews {
-//   padding-top: rem(70px);
+.reviews {
+  @include phones {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 
-// }
+.reviews__content-part {
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+  }
+}
 
 .reviews__headline {
   text-align: center;
@@ -411,10 +465,11 @@
   }
 
   @include phones {
-    margin-bottom: rem(8px);
-    background-position: right top 10% no-repeat;
+    background-position: right top 10%;
     background-repeat: no-repeat;
     background-size: 25%;
+    margin-bottom: 0;
+    padding-top: rem(25px);
   }
 
   &::before {
@@ -428,6 +483,11 @@
     left: 50%;
     transform: translate(-50%);
     top: rem(-65px);
+
+    @include phones {
+      width: rem(81px);
+      height: rem(81px);
+    }
   }
 }
 
@@ -463,6 +523,10 @@
   flex-direction: column;
   justify-content: flex-start;
   padding-top: rem(10px);
+
+  @include phones {
+    padding-top: 0;
+  }
 }
 
 .review__title {
@@ -617,7 +681,11 @@
 
 .form__btns {
   display: flex;
-  justify-content: center;
+
+
+  @include tablets {
+    justify-content: center;
+  }
 
   input:not(:last-child) {
     margin-right: rem(10px);
@@ -642,9 +710,16 @@
 .radio--checkbox {
   .radio__visible {
     border-radius: 0;
+    position: relative;
 
-    &::before {
-      background: url(../img/jpg/form/tick.png) center center no-repeat;
+    .radio__checkmark {
+      width: rem(20px);
+      height: rem(20px);
+      fill: $green;
+      display: none;
+      position:absolute;
+      top: 15%;
+      left: 10%;
     }
   }
 }
@@ -657,6 +732,18 @@
       display: block;
     }
   }
+}
+
+.radio--checkbox {
+  .radio__elem:checked~.radio__visible {
+  .radio__checkmark {
+    display: block;
+  }
+
+  &::before {
+    display: none;
+  }
+}
 }
 
 .radio__visible {
@@ -746,6 +833,7 @@
   bottom: 0;
   background-color: #fff;
   padding-top: rem(20px);
+  font-size: rem(21px);
 }
 
 
@@ -754,7 +842,7 @@
 }
 
 .social-nets__item {
-  margin-right: 10px;
+  margin-right: rem(20px);
 
   &:last-child {
     margin-right: 0;
@@ -769,82 +857,26 @@
   background: center center no-repeat;
 }
 
-.social-nets_icon_vk {
-  .social-nets__link {
-    width: 23px;
-    height: 23px;
-    background: url(../img/jpg/socials/vk.png) center center no-repeat;
-    opacity: 30%;
-    transition: 0.3s;
+.social-nets__icon {
+  width: rem(23px);
+  height: rem(23px);
+  fill: #b2b2b2;
+  transition: 0.3s;
 
-    &:hover {
-      background: url(../img/jpg/socials/vk.png) center center no-repeat;
-      opacity: 100%;
-    }
+  &:hover {
+    fill: black;
   }
 }
 
-.social-nets_icon_fb {
-  .social-nets__link {
-    width: 23px;
-    height: 23px;
-    background: url(../img/jpg/socials/fb.png) center center no-repeat;
-    opacity: 30%;
-    transition: 0.3s;
 
-    &:hover {
-      background: url(../img/jpg/socials/fb.png) center center no-repeat;
-      opacity: 100%;
-    }
-  }
-}
-
-.social-nets_icon_ig {
-  .social-nets__link {
-    width: 23px;
-    height: 23px;
-    background: url(../img/jpg/socials/ig.png) center center no-repeat;
-    opacity: 30%;
-    transition: 0.3s;
-
-    &:hover {
-      background: url(../img/jpg/socials/ig.png) center center no-repeat;
-      opacity: 100%;
-    }
-  }
-}
-
-.social-nets_icon_tw {
-  .social-nets__link {
-    width: 23px;
-    height: 23px;
-    background: url(../img/jpg/socials/tw.png) center center no-repeat;
-    opacity: 30%;
-    transition: 0.3s;
-
-    &:hover {
-      background: url(../img/jpg/socials/tw.png) center center no-repeat;
-      opacity: 100%;
-    }
-  }
-}
-
-.hamburger {
-  height: 20px;
-  width: 24px;
+.hamburger__icon {
+  height: rem(20px);
+  width: rem(24px);
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
+  fill: white;
   margin-right: 10px;
 
   @include tablets {
     display: inline-flex;
   }
-}
-
-.hamburger__plank {
-  display: block;
-  background: #fff;
-  height: 4px;
-  border-radius: 10px;
 }
