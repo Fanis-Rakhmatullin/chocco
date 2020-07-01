@@ -153,6 +153,18 @@ img {
     }
   }
 
+  &-slider {
+    background: url('../../img/jpg/slider/ornament.png') bottom -214px right no-repeat;
+    background-color: $paleBg;
+
+    &::after {
+      content: url('../../img/jpg/slider/berries.png');
+      position: absolute;
+      right: 10px;
+      bottom: -80px;
+    }
+  }
+
   &-review {
     background: url(../img/jpg/reviews/top-berries.png) right -6% top 9% no-repeat;
     @include phones {
@@ -230,6 +242,10 @@ img {
   &-why {
     height: 100%;
     justify-content: center;
+  }
+
+  &-slider {
+    margin: 0 rem(10px);
   }
 
   &-review {

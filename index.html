@@ -21,10 +21,10 @@
           <nav class="menu">
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="#" class="menu__link">О нас</a>
+                <a href="#about-us" class="menu__link">О нас</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Батончики</a>
+                <a href="#chocolate-bar" class="menu__link">Батончики</a>
               </li>
               <li class="menu__item">
                 <a href="#" class="menu__link">Команда</a>
@@ -33,13 +33,13 @@
                 <a href="#" class="menu__link">Меню</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Отзывы</a>
+                <a href="#reviews" class="menu__link">Отзывы</a>
               </li>
               <li class="menu__item">
                 <a href="#" class="menu__link">Как мы работаем</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Контакты</a>
+                <a href="#contacts" class="menu__link">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -51,11 +51,11 @@
             <a href="tel:+78009039090" class="contacts__phone contacts__phone--header">8 800 903 90 90</a>
           </address>
 
-          <a href="#" class="hamburger">
+          <!-- <a href="#" class="hamburger">
             <svg class="hamburger__icon">
               <use xlink:href="img/sprite.svg#humburger"></use>
             </svg>
-          </a>
+          </a> -->
         </header>
 
         <div class="hero-content">
@@ -94,7 +94,7 @@
       </div>
     </section>
 
-    <section class="section section-why">
+    <section class="section section-why" id="about-us">
       <div class="container container-why">
         <div class="why-chocco">
           <div class="why-chocco__highlight">
@@ -153,7 +153,52 @@
       </div>
     </section>
 
-    <section class="section section-review">
+    <section class="section section-slider" id="chocolate-bar">
+
+      <div class="slider">
+        <svg class="slider__arrow arrow-left">
+          <use xlink:href="img/sprite.svg#arrow"></use>
+        </svg>
+        <div class="container container-slider">
+          <div class="slider__slide slide">
+            <div class="slide__pic">
+              <img class="slide__img" src="img/jpg/slider/chocolate.png" alt="picture of chocolate bars">
+            </div>
+            <div class="slide__content">
+              <div class="slide__composition">
+                <svg class="slide__composition-pic">
+                  <use xlink:href="img/sprite.svg#chocolate-bar"></use>
+                </svg>
+                <div class="slide__composition-text">состав</div>
+              </div>
+              <div class="slide__headline section-headline">Батончик “Гранола
+                виноград”</div>
+
+              <div class="slide__description">
+                <div class="slide__text">
+                  Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко,
+                  заменитель сахара и какао бобы.
+                </div>
+                <div class="slide__traits">
+                  <div class="slide__calories">Калорийность <span class="slide__trait-value">110 ккал</span></div>
+                  <div class="slide__weight">Вес <span class="slide__trait-value">95 грамм</span></div>
+                </div>
+                <div class="slide__price">
+                  <div class="slide__price-tag">140 <span>₽</span></div>
+                  <button class="btn btn--theme--green">Заказать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <svg class="slider__arrow arrow-right">
+          <use xlink:href="img/sprite.svg#arrow"></use>
+        </svg>
+      </div>
+
+    </section>
+
+    <section class="section section-review" id="reviews">
       <div class="container container-review">
         <div class="reviews">
           <h2 class="reviews__headline section-headline">Отзывы</h2>
@@ -276,7 +321,7 @@
       </div>
     </section>
 
-    <section class="section section-map">
+    <section class="section section-map" id="contacts">
       <!-- temporary picture instead of interactive map -->
       <div class="map">
         <img class='map__img' src="img/jpg/map.jpg" alt="map">
@@ -364,6 +409,44 @@
       </li>
     </ul>
   </nav>
+
+  <a href="#" class="hamburger">
+    <svg class="hamburger__icon">
+      <use xlink:href="img/sprite.svg#humburger"></use>
+    </svg>
+  </a>
+
+  <div class="modal-menu">
+    <a href="#" class="modal-menu__close">
+      <svg class="modal-menu__close-pic">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </a>
+    <ul class="modal-menu__list">
+      <li class="modal-menu__item">
+        <a href="#about-us" class="modal-menu__link">О нас</a>
+      </li>
+      <li class="modal-menu__item">
+        <a href="#chocolate-bar" class="modal-menu__link">Батончики</a>
+      </li>
+      <li class="modal-menu__item">
+        <a href="#" class="modal-menu__link">Команда</a>
+      </li>
+      <li class="modal-menu__item">
+        <a href="#" class="modal-menu__link">Меню</a>
+      </li>
+      <li class="modal-menu__item">
+        <a href="#reviews" class="modal-menu__link">Отзывы</a>
+      </li>
+      <li class="modal-menu__item">
+        <a href="#" class="modal-menu__link">Как мы работаем</a>
+      </li>
+      <li class="modal-menu__item">
+        <a href="#contacts" class="modal-menu__link">Контакты</a>
+      </li>
+    </ul>
+  </div>
+  <script src="index.js"></script>
 </body>
 
 </html>
