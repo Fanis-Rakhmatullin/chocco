@@ -477,6 +477,7 @@
 }
 
 .slide__composition {
+  position: relative;
   width: rem(90px);
   height: rem(90px);
   border-radius: 5px;
@@ -486,6 +487,14 @@
   justify-content: center;
   align-items: center;
   margin-bottom: rem(30px);
+
+  &:hover {
+    background: #60aacc;
+
+    .composition {
+      display: block;
+    }
+  }
 
   @include tablets {
     display: none;
@@ -504,6 +513,46 @@
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
+}
+
+.composition {
+  display: none;
+  position: absolute;
+  bottom: -266%;
+  right: -306%;
+  width: 275px;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.composition__list {
+  padding: 22px 18px 25px 30px;
+}
+
+.composition__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.composition__icon {
+  width: 37px;
+  height: 37px;
+}
+
+.composition__ingredient {
+  width: 55%;
+  font-weight: 500;
+}
+
+.composition__weight {
+  font-weight: bold;
 }
 
 .slide__headline {

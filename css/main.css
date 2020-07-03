@@ -156,11 +156,11 @@ img {
   }
 }
 .section-slider {
-  background: url("../../img/jpg/slider/ornament.png") bottom -214px right no-repeat;
+  background: url("../img/jpg/slider/ornament.png") bottom -214px right no-repeat;
   background-color: #f8faf9;
 }
 .section-slider::after {
-  content: url("../../img/jpg/slider/berries.png");
+  content: url("../img/jpg/slider/berries.png");
   position: absolute;
   right: 10px;
   bottom: -80px;
@@ -737,6 +737,7 @@ img {
 }
 
 .slide__composition {
+  position: relative;
   width: 5rem;
   height: 5rem;
   border-radius: 5px;
@@ -746,6 +747,12 @@ img {
   justify-content: center;
   align-items: center;
   margin-bottom: 1.6666666667rem;
+}
+.slide__composition:hover {
+  background: #60aacc;
+}
+.slide__composition:hover .composition {
+  display: block;
 }
 @media screen and (max-width: 768px) {
   .slide__composition {
@@ -765,6 +772,45 @@ img {
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
+}
+
+.composition {
+  display: none;
+  position: absolute;
+  bottom: -266%;
+  right: -306%;
+  width: 275px;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.composition__list {
+  padding: 22px 18px 25px 30px;
+}
+
+.composition__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.composition__item:last-child {
+  margin-bottom: 0;
+}
+
+.composition__icon {
+  width: 37px;
+  height: 37px;
+}
+
+.composition__ingredient {
+  width: 55%;
+  font-weight: 500;
+}
+
+.composition__weight {
+  font-weight: bold;
 }
 
 .slide__headline {
