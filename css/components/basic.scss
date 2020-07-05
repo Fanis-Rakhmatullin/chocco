@@ -415,6 +415,8 @@
 .slider__arrow {
   width: rem(16px);
   fill: #151515;
+  cursor: pointer;
+  z-index: $z-index-btn;
 
   @include tablets {
     position: absolute;
@@ -625,6 +627,139 @@
 }
 
 
+.team__headline {
+  text-align: center;
+  margin-bottom: rem(50px);
+
+  @include tablets {
+    margin-bottom: rem(38px);
+  }
+
+  @include phones {
+    margin-bottom: rem(20px);
+  }
+}
+
+.team__list {
+  display: flex;
+  justify-content: space-between;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.team__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24%;
+  position: relative;
+
+  @include tablets {
+    width: 40%;
+    margin-bottom: rem(17px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include phones {
+    width: 70%;
+  }
+}
+
+.team__photo {
+  width: 100%;
+  height: rem(288px);
+  overflow: hidden;
+  margin-bottom: rem(20px);
+
+  @include tablets {
+    width: rem(222px);
+  }
+}
+
+.team__pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team__name {
+  font-size: rem(21px);
+  font-weight: bold;
+  margin-bottom: rem(8px);
+  position: relative;
+
+  &::after {
+    content: "";
+    border: 5px solid transparent;
+    border-bottom: 5px solid $green;
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    transition: transform 0.3s;
+  }
+
+  @include tablets {
+    margin-bottom: 0;
+  }
+}
+
+.team__item.opened {
+  .team__name {
+    margin-bottom: 10px;
+
+    &::after {
+      transform: rotate(180deg);
+      right: -15px;
+      top: 11px;
+    }
+  }
+}
+
+.team__desc {
+  overflow: hidden;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  transition: height 0.3s;
+
+  @include tablets {
+    position: static;
+  }
+}
+
+.team__desc-block {
+  text-align: center;
+
+  @include tablets {
+    // margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.team__text {
+  font-weight: 300;
+  color: #666666;
+}
+
+.team__list--mobile {
+  display: none;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
 .reviews {
   @include phones {
     height: 100%;
@@ -669,6 +804,21 @@
   }
 }
 
+
+.reviews__list {
+  position: relative;
+  min-height: 40vh;
+}
+
+.reviews__item {
+  position: absolute;
+  opacity: 0;
+
+  &.active {
+    position: static;
+    opacity: 1;
+  }
+}
 
 .review {
   background: url(../img/jpg/reviews/in-ornament.png) right top no-repeat;
@@ -757,6 +907,7 @@
   font-size: rem(30px);
   font-weight: bold;
   margin-bottom: rem(18px);
+  line-height: 1;
 }
 
 .review__text {
@@ -789,7 +940,7 @@
     height: 70px;
   }
 
-  &--active,
+  &.active,
   &:hover {
     border-color: $green;
   }
@@ -802,8 +953,13 @@
 }
 
 
+
 .form {
   display: flex;
+
+  .input-error {
+    border: solid rem(3px) hotpink;
+  }
 
   @include tablets {
     flex-direction: column;
@@ -1162,3 +1318,29 @@
   display: block;
   text-decoration: none;
 }
+
+.modal {
+  display: none;
+  .btn {
+    height: 50px;
+  }
+}
+
+.modal__container {
+  background:#fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__content {
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.error-modal {
+  .modal__content {
+    color: red;
+  }
+}
+

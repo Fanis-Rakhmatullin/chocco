@@ -157,6 +157,8 @@ img {
     background: url('../img/jpg/slider/ornament.png') bottom -214px right no-repeat;
     background-color: $paleBg;
 
+    @include tablets {}
+
     &::after {
       content: url('../img/jpg/slider/berries.png');
       position: absolute;
@@ -165,12 +167,17 @@ img {
     }
   }
 
+  &-team {
+    background: transparent;
+  }
+
   &-review {
     background: url(../img/jpg/reviews/top-berries.png) right -6% top 9% no-repeat;
+
     @include phones {
       background: url(../img/jpg/reviews/top-berries.png) right -15% top 0% / 35% no-repeat;
     }
-    
+
     &::before {
       content: url(../img/jpg/reviews/bot-berries.png);
       position: absolute;
@@ -246,6 +253,12 @@ img {
 
   &-slider {
     margin: 0 rem(10px);
+
+    .bx-wrapper {
+      background: transparent;
+      box-shadow: none;
+      border: none;
+    }
   }
 
   &-review {
