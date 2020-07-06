@@ -1,5 +1,5 @@
 
-// Функция находящая в списке reviews__list item соответствующий 
+// Функция, находящая в списке reviews__list item соответствующий 
 // интерактивному аватару:
 const findBlockByDataAttr = (alias) => {
   return $('.reviews__item').filter((ndx, item) => {
@@ -11,7 +11,6 @@ const findBlockByDataAttr = (alias) => {
 $('.interactive-avatar__link').on('click', function (e) {
   e.preventDefault();
 
-  // Интерактивный аватар на который произошел клик:
   const $clicked = $(e.currentTarget);
 
   // Дата-атрибут интерактивного аватара (one, two или three)

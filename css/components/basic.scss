@@ -173,7 +173,6 @@
 
 .btn {
   display: inline-block;
-  // эксперимент
   height: rem(58px);
   width: 156px;
   font-size: 19px;
@@ -184,7 +183,7 @@
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  z-index: $z-index-btn;
+  z-index: map-get($z-indexes, 'btns');
 }
 
 .btn--theme--white {
@@ -413,10 +412,10 @@
 }
 
 .slider__arrow {
-  width: rem(16px);
+  width: rem(18px);
   fill: #151515;
   cursor: pointer;
-  z-index: $z-index-btn;
+  z-index: map-get($z-indexes, 'btns');
 
   @include tablets {
     position: absolute;
@@ -428,14 +427,14 @@
 
   @include tablets {
     top: 9%;
-    left: 5%;
+    left: 8%;
   }
 }
 
 .arrow-right {
   @include tablets {
     top: 9%;
-    right: 5%;
+    right: 8%;
   }
 }
 
@@ -574,6 +573,10 @@
   @include tablets {
     text-align: center;
   }
+
+  @include phones {
+    margin-bottom: rem(15px);
+  }
 }
 
 .slide__traits {
@@ -582,6 +585,10 @@
 
   @include tablets {
     justify-content: center;
+  }
+
+  @include phones {
+    margin-bottom: rem(5px);
   }
 }
 
@@ -933,7 +940,7 @@
   overflow: hidden;
   border: 4px solid transparent;
   position: relative;
-  z-index: $z-index-interactive-avatar;
+  z-index: map-get($z-indexes, 'interactive-avatar');
 
   @include tablets {
     width: 70px;
@@ -1153,7 +1160,7 @@
   position: fixed;
   top: 20%;
   right: 3%;
-  z-index: $z-fixed-menu;
+  z-index: map-get($z-indexes, 'fixed-menu');
 }
 
 .fixed-menu__item {
@@ -1253,7 +1260,7 @@
   position: fixed;
   top: rem(31px);
   right: rem(26px);
-  z-index: $z-fixed-menu;
+  z-index: map-get($z-indexes, 'fixed-menu');
 
   @include tablets {
     display: inline-flex;
@@ -1275,7 +1282,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $z-index-modal-menu;
+  z-index: map-get($z-indexes, 'modal-menu');
 }
 
 .modal-menu__close {

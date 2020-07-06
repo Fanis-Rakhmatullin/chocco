@@ -1,3 +1,10 @@
+// Используется библиотека fancybox для вызова модального окна с результатом 
+// отправки формы. Успех/неудача в случайном порядке - так настроен сервер.
+ 
+
+// Функция валидатор. Если строка не заполнена или заполнена пробелами 
+// выделяет строку розовым border (навешивает класс "inpur-error")
+// Возвращает true/false. 
 const validateFields = (form, fieldsArr) => {
   fieldsArr.forEach((field) => {
     field.removeClass('input-error');
@@ -11,6 +18,7 @@ const validateFields = (form, fieldsArr) => {
   return errorFields.length == 0;
 }
 
+ // Обработчик событий отправки формы.
 $('.form').submit(e => {
   e.preventDefault();
 
@@ -24,6 +32,8 @@ $('.form').submit(e => {
   const content = modal.find('.modal__content');
 
   modal.removeClass('error-modal');
+
+  // [name, phone, comment, to] -- обязательные для заполнения поля.
 
   const isValid = validateFields(form, [name, phone, comment, to]);
 
@@ -39,6 +49,7 @@ $('.form').submit(e => {
       }
     })
 
+    //  Очищает форму в случае успеха.
     request.done(data => {
       content.text(data.message);
       $('.form__input').val('');
@@ -48,7 +59,7 @@ $('.form').submit(e => {
       content.text(data.responseJSON.message);
       modal.addClass('error-modal');
     })
-
+      // Вызов модального окна с сообщением об успехе/ошибке. Библиотека fancybox.
     request.always(() => {
       $.fancybox.open({
         src: '#modal',
@@ -60,6 +71,7 @@ $('.form').submit(e => {
   }
 })
 
+      // Обработчик событий для закрытия модального окна по клику на кнопку.
 $('.js-submit-btn').click(e => {
   e.preventDefault();
 
