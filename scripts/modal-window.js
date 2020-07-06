@@ -41,6 +41,7 @@ $('.form').submit(e => {
 
     request.done(data => {
       content.text(data.message);
+      $('.form__input').val('');
     })
 
     request.fail(data => {
