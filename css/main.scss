@@ -14,10 +14,14 @@
     $pale2: #f3f5f3;
 
 
-$z-fixed-menu: 100;
-$z-index-interactive-avatar: 50;
-$z-index-btn: 50;
-$z-index-modal-menu: 150;
+$z-indexes: (
+  'bg-items': 10,
+  'interactive-avatar': 50,
+  'btns': 50,
+  'fixed-menu': 100,
+  'modal-menu': 150
+);
+
 $baseFontSize: 18px;
 $containerWidth: 940px;
 

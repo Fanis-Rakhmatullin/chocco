@@ -1,3 +1,6 @@
+// Функция задает контейнеру такую же высоту, как у блока с контентом,
+// таким образом "открывая" его. Навешивает класс 'opened' на открытый контейнер.
+
 const openItem = item => {
   const container = item.closest('.team__item');
   const contentBlock = container.find('.team__desc');
@@ -9,6 +12,9 @@ const openItem = item => {
   contentBlock.height(reqHeight);
 }
 
+// Функция закрывает все контейнеры. Задает высоту 0.
+// Снимает класс 'opened'
+
 const closeEveryItem = container => {
   const items = container.find('.team__desc');
   const itemContainer = container.find('.team__item');
@@ -16,6 +22,9 @@ const closeEveryItem = container => {
   itemContainer.removeClass('opened')
   items.height(0);
 }
+
+// Обработчик событий: при клике на закрытый контейнер открывает его
+// и закрывает все остальные. При клике на открытый - закрывает.
 
 $('.team__name').on('click', function (e) {
   const $this = $(e.currentTarget);
