@@ -198,8 +198,6 @@ img {
     }
 
     @include phones {
-      left: -2rem;
-      bottom: -9rem;
       transform: scale(0.5);
     }
   }
@@ -226,7 +224,7 @@ img {
       transform: scale(0.6);
     }
 
-    @include tablets {
+    @include phones{
       transform: scale(0.45);
     }
   }

@@ -204,8 +204,6 @@ img {
 }
 @media screen and (max-width: 480px) {
   .section-review::before {
-    left: -2rem;
-    bottom: -9rem;
     transform: scale(0.5);
   }
 }
@@ -231,7 +229,7 @@ img {
     transform: scale(0.6);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .section-form::before {
     transform: scale(0.45);
   }
