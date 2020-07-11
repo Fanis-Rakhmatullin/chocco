@@ -177,6 +177,30 @@ img {
   }
 }
 
+.section-range {
+  background: url(../img/range/menu-bg.png) center center / cover no-repeat, black;
+  justify-content: start;
+
+  &::before {
+    content: url(../img/range/berry.png);
+    position: absolute;
+    top: -11%;
+    left: 2%;
+    z-index: map-get($z-indexes, 'bg-items');
+
+    @include tablets {
+      top: -6%;
+      left: 4%;
+      transform: scale(0.75);
+    }
+
+    @include phones {
+      top: -11%;
+      left: 0%;
+    }
+  }
+}
+
 .section-review {
   background: url(../img/jpg/reviews/top-berries.png) right -6% top 9% no-repeat;
 
@@ -224,7 +248,7 @@ img {
       transform: scale(0.6);
     }
 
-    @include phones{
+    @include phones {
       transform: scale(0.45);
     }
   }
@@ -240,45 +264,45 @@ img {
   flex-direction: column;
 }
 
-  .container-hero {
-    height: 100%;
-    background: url(../img/jpg/decor/choch.png) right center / 50% auto no-repeat;
-    justify-content: space-between;
+.container-hero {
+  height: 100%;
+  background: url(../img/jpg/decor/choch.png) right center / 50% auto no-repeat;
+  justify-content: space-between;
 
-    @include tablets {
-      background: none;
-    }
+  @include tablets {
+    background: none;
   }
+}
 
-  .container-why {
-    height: 100%;
-    justify-content: center;
+.container-why {
+  height: 100%;
+  justify-content: center;
+}
+
+.container-slider {
+  margin: 0 rem(10px);
+
+  .bx-wrapper {
+    background: transparent;
+    box-shadow: none;
+    border: none;
   }
+}
 
-  .container-slider {
-    margin: 0 rem(10px);
-
-    .bx-wrapper {
-      background: transparent;
-      box-shadow: none;
-      border: none;
-    }
-  }
-
-  .container-review {
-    height: 100%;
-    justify-content: center;
-  }
+.container-review {
+  height: 100%;
+  justify-content: center;
+}
 
 
-  .container-footer {
-    flex-direction: row;
-    justify-content: space-between;
+.container-footer {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  @include phones {
+    flex-direction: column;
     align-items: center;
-    height: 100%;
-
-    @include phones {
-      flex-direction: column;
-      align-items: center;
-    }
   }
+}

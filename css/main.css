@@ -181,6 +181,31 @@ img {
   }
 }
 
+.section-range {
+  background: url(../img/range/menu-bg.png) center center/cover no-repeat, black;
+  justify-content: start;
+}
+.section-range::before {
+  content: url(../img/range/berry.png);
+  position: absolute;
+  top: -11%;
+  left: 2%;
+  z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  .section-range::before {
+    top: -6%;
+    left: 4%;
+    transform: scale(0.75);
+  }
+}
+@media screen and (max-width: 480px) {
+  .section-range::before {
+    top: -11%;
+    left: 0%;
+  }
+}
+
 .section-review {
   background: url(../img/jpg/reviews/top-berries.png) right -6% top 9% no-repeat;
 }
@@ -1009,13 +1034,15 @@ img {
   }
 }
 
-.team__item.opened .team__name {
-  margin-bottom: 10px;
-}
 .team__item.opened .team__name::after {
   transform: rotate(180deg);
   right: -15px;
   top: 11px;
+}
+@media screen and (max-width: 768px) {
+  .team__item.opened .team__name {
+    margin-bottom: 10px;
+  }
 }
 
 .team__desc {
@@ -1057,6 +1084,104 @@ img {
     justify-content: center;
     align-items: center;
   }
+}
+
+.range__headline {
+  color: #fff;
+  padding-top: 6.5%;
+  padding-left: 5.5%;
+  width: 21%;
+}
+@media screen and (max-width: 768px) {
+  .range__headline {
+    padding-top: 12.5%;
+  }
+}
+
+.range__list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.range__item {
+  display: flex;
+  color: #fff;
+  transition: 0.4s;
+  transition-delay: 0.6s;
+}
+
+@media screen and (max-width: 480px) {
+  .range__item.active {
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.range__title-link {
+  width: 5.5555555556rem;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+@media screen and (max-width: 480px) {
+  .range__title-link {
+    width: 15vw;
+  }
+}
+
+.range__title-text {
+  font-size: 2.6666666667rem;
+  font-weight: bold;
+  white-space: nowrap;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  padding-top: 2.2222222222rem;
+}
+@media screen and (max-width: 768px) {
+  .range__title-text {
+    font-size: 2.2222222222rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .range__title-text {
+    font-size: 1.7777777778rem;
+  }
+}
+
+.range__content {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  background-color: rgba(51, 53, 55, 0.93);
+  transition: width 0.7s;
+}
+
+.range__container {
+  position: absolute;
+  padding: 2.7777777778rem 8vw 5vh 4vw;
+}
+
+.range__close {
+  top: 1.4444444444rem;
+  right: 1.7777777778rem;
+  position: absolute;
+  padding: 0;
+}
+
+.range__close-pic {
+  fill: #fff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.range__text {
+  font-size: 0.8888888889rem;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 480px) {
