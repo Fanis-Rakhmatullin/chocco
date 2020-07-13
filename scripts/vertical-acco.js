@@ -40,7 +40,7 @@ const measureWidth = (item) => {
     // слово "Меню"
     reqItemWidth = ((screenWidth * 0.7) - titleWidth * titleBlocks.length) > 500
       ? 500
-      : (screenWidth * 0.7) - titleWidth;
+      : (screenWidth * 0.7) - titleWidth * titleBlocks.length;
   }
 
   return {
