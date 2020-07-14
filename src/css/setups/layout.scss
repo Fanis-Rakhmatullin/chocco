@@ -102,7 +102,7 @@ img {
 }
 
 .section-hero {
-  background: url(../img/decor/ornament.png) right bottom no-repeat;
+  background: url(img/decor/ornament.png) right bottom no-repeat;
   background-color: $blueBg;
   color: white;
   padding-bottom: 45px;
@@ -124,14 +124,14 @@ img {
   }
 
   &:before {
-    content: url(../img/decor/leaf.png);
+    content: url(img/decor/leaf.png);
     position: absolute;
     bottom: -40px;
     left: 2%;
   }
 
   &:after {
-    content: url(../img/decor/berries.png);
+    content: url(img/decor/berries.png);
     position: absolute;
     bottom: -40px;
     right: 0;
@@ -140,7 +140,7 @@ img {
 
 
 .section-why {
-  background: url(../img/why-us/decor/leaf-orn.png) left top 50% no-repeat;
+  background: url(img/why-us/decor/leaf-orn.png) left top 50% no-repeat;
 
   @include tablets {
     background-position: left top 12%;
@@ -151,7 +151,7 @@ img {
   }
 
   &::before {
-    content: url(../img/why-us/decor/berry.png);
+    content: url(img/why-us/decor/berry.png);
     position: absolute;
     left: 0;
     bottom: -80px;
@@ -167,7 +167,7 @@ img {
   background-color: $paleBg;
 
   &::before {
-    content: url('../img/slider/berry.png');
+    content: url('img/slider/berry.png');
     position: absolute;
     right: 0;
     bottom: -216px;
@@ -185,11 +185,11 @@ img {
 }
 
 .section-range {
-  background: url(../img/range/menu-bg.png) center center / cover no-repeat, black;
+  background: url(img/range/menu-bg.png) center center / cover no-repeat, black;
   justify-content: start;
 
   &::before {
-    content: url(../img/range/berry.png);
+    content: url(img/range/berry.png);
     position: absolute;
     top: -11%;
     left: 2%;
@@ -209,14 +209,14 @@ img {
 }
 
 .section-review {
-  background: url(../img/reviews/top-berries.png) right -6% top 9% no-repeat;
+  background: url(img/reviews/top-berries.png) right -6% top 9% no-repeat;
 
   @include phones {
-    background: url(../img/reviews/top-berries.png) right -15% top 0% / 35% no-repeat;
+    background: url(img/reviews/top-berries.png) right -15% top 0% / 35% no-repeat;
   }
 
   &::before {
-    content: url(../img/reviews/bot-berries.png);
+    content: url(img/reviews/bot-berries.png);
     position: absolute;
     left: 0;
     bottom: -154px;
@@ -238,7 +238,7 @@ img {
   background-color: #f8faf9;
 
   &::before {
-    content: url(../../img/player/leaf-top.png);
+    content: url(../img/player/leaf-top.png);
     position: absolute;
     right: 10%;
     top: 15%;
@@ -257,7 +257,7 @@ img {
   }
 
   &::after {
-    content: url(../../img/player/leaf-bot.png);
+    content: url(../img/player/leaf-bot.png);
     position: absolute;
     left: 7%;
     bottom: 0;
@@ -277,18 +277,18 @@ img {
 }
 
 .section-form {
-  background: url(../img/form/leaf.png) right bottom 80px no-repeat,
-    url(../img/form/bot-berry.png) left 2% bottom 80px no-repeat,
-    url(../img/form/pattern.png) center center / cover no-repeat;
+  background: url(img/form/leaf.png) right bottom 80px no-repeat,
+    url(img/form/bot-berry.png) left 2% bottom 80px no-repeat,
+    url(img/form/pattern.png) center center / cover no-repeat;
   color: $green;
 
   @include tablets {
-    background: url(../img/form/pattern.png) center center / cover no-repeat;
+    background: url(img/form/pattern.png) center center / cover no-repeat;
     color: $green;
   }
 
   &::before {
-    content: url(../img/form/top-berry.png);
+    content: url(img/form/top-berry.png);
     position: absolute;
     right: -90px;
     top: -168px;
@@ -315,7 +315,7 @@ img {
 
 .container-hero {
   height: 100%;
-  background: url(../img/decor/choch.png) right center / 50% auto no-repeat;
+  background: url(img/decor/choch.png) right center / 50% auto no-repeat;
   justify-content: space-between;
 
   @include tablets {
