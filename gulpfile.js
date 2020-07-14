@@ -41,9 +41,10 @@ task('styles', () => {
     .pipe(px2rem({
       dpr: 1,            
       rem: 18,
+      one: false 
     }))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
+      browsers: ['last 2 versions'], 
       cascade: false
     }))
     .pipe(gcmq())

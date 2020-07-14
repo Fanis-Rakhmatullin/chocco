@@ -238,7 +238,7 @@ img {
   background-color: #f8faf9;
 
   &::before {
-    content: url(../img/player/leaf-top.png);
+    content: url(img/player/leaf-top.png);
     position: absolute;
     right: 10%;
     top: 15%;
@@ -257,7 +257,7 @@ img {
   }
 
   &::after {
-    content: url(../img/player/leaf-bot.png);
+    content: url(img/player/leaf-bot.png);
     position: absolute;
     left: 7%;
     bottom: 0;
@@ -307,7 +307,7 @@ img {
 .container {
   margin: 0 auto;
   width: 95%;
-  max-width: $containerWidth;
+  max-width: 58.75rem;
   position: relative;
   display: flex;
   flex-direction: column;
