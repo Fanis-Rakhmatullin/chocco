@@ -7,7 +7,7 @@ const reload = browserSync.reload;
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
 const gcmq = require('gulp-group-css-media-queries');
-// const px2rem = require('px2rem');
+const px2rem = require('gulp-smile-px2rem');
 const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
@@ -17,6 +17,7 @@ const gulpif = require('gulp-if');
 const env = process.env.NODE_ENV;
 
 const { SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS } = require('./gulp.config');
+
 
 sass.compiler = require('node-sass');
 
@@ -37,6 +38,10 @@ task('styles', () => {
     .pipe(concat('main.min.scss'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
+    .pipe(px2rem({
+      dpr: 1,            
+      rem: 18,
+    }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
