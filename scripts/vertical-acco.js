@@ -1,3 +1,4 @@
+(function () {
 // Функция измеряющая необходимую ширину.
 // Возвращает объект с шириной для классов .textContent и .textContainer
 const measureWidth = (item) => {
@@ -104,3 +105,5 @@ $('.range__close').on('click', (e) => {
   e.preventDefault();
   closeEveryAccoItem($('.range__list'));
 })
+
+}());

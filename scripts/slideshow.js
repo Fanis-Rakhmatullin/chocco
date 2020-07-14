@@ -1,4 +1,4 @@
-
+(function () {
 // Функция, находящая в списке reviews__list item соответствующий 
 // интерактивному аватару:
 const findBlockByDataAttr = (alias) => {
@@ -25,3 +25,5 @@ $('.interactive-avatar__link').on('click', function (e) {
   itemToShow.addClass('active').siblings().removeClass('active');
   curItem.addClass('active').siblings().removeClass('active');
 })
+
+}());

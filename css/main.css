@@ -104,7 +104,7 @@ img {
 }
 
 .section-hero {
-  background: url(../img/jpg/decor/ornament.png) right bottom no-repeat;
+  background: url(../img/decor/ornament.png) right bottom no-repeat;
   background-color: #86c3d7;
   color: white;
   padding-bottom: 2.5rem;
@@ -126,20 +126,20 @@ img {
   }
 }
 .section-hero:before {
-  content: url(../img/jpg/decor/leaf.png);
+  content: url(../img/decor/leaf.png);
   position: absolute;
   bottom: -2.2222222222rem;
   left: 2%;
 }
 .section-hero:after {
-  content: url(../img/jpg/decor/berries.png);
+  content: url(../img/decor/berries.png);
   position: absolute;
   bottom: -2.2222222222rem;
   right: 0;
 }
 
 .section-why {
-  background: url(../img/jpg/why-us/decor/leaf-orn.png) left top 50% no-repeat;
+  background: url(../img/why-us/decor/leaf-orn.png) left top 50% no-repeat;
 }
 @media screen and (max-width: 768px) {
   .section-why {
@@ -152,7 +152,7 @@ img {
   }
 }
 .section-why::before {
-  content: url(../img/jpg/why-us/decor/berry.png);
+  content: url(../img/why-us/decor/berry.png);
   position: absolute;
   left: 0;
   bottom: -4.4444444444rem;
@@ -168,7 +168,7 @@ img {
   background-color: #f8faf9;
 }
 .section-slider::before {
-  content: url("../img/jpg/slider/berry.png");
+  content: url("../img/slider/berry.png");
   position: absolute;
   right: 0;
   bottom: -216px;
@@ -212,15 +212,15 @@ img {
 }
 
 .section-review {
-  background: url(../img/jpg/reviews/top-berries.png) right -6% top 9% no-repeat;
+  background: url(../img/reviews/top-berries.png) right -6% top 9% no-repeat;
 }
 @media screen and (max-width: 480px) {
   .section-review {
-    background: url(../img/jpg/reviews/top-berries.png) right -15% top 0%/35% no-repeat;
+    background: url(../img/reviews/top-berries.png) right -15% top 0%/35% no-repeat;
   }
 }
 .section-review::before {
-  content: url(../img/jpg/reviews/bot-berries.png);
+  content: url(../img/reviews/bot-berries.png);
   position: absolute;
   left: 0;
   bottom: -8.5555555556rem;
@@ -241,19 +241,59 @@ img {
 .section-video {
   background-color: #f8faf9;
 }
+.section-video::before {
+  content: url(../../img/player/leaf-top.png);
+  position: absolute;
+  right: 10%;
+  top: 15%;
+}
+@media screen and (max-width: 768px) {
+  .section-video::before {
+    right: 3%;
+    top: 34%;
+    transform: scale(0.7);
+  }
+}
+@media screen and (max-width: 480px) {
+  .section-video::before {
+    right: -2%;
+    top: 32%;
+    transform: scale(0.7);
+  }
+}
+.section-video::after {
+  content: url(../../img/player/leaf-bot.png);
+  position: absolute;
+  left: 7%;
+  bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .section-video::after {
+    left: -1%;
+    bottom: 31%;
+    transform: scale(0.7);
+  }
+}
+@media screen and (max-width: 480px) {
+  .section-video::after {
+    left: -3%;
+    bottom: 19%;
+    transform: scale(0.7);
+  }
+}
 
 .section-form {
-  background: url(../img/jpg/form/leaf.png) right bottom 4.4444444444rem no-repeat, url(../img/jpg/form/bot-berry.png) left 2% bottom 4.4444444444rem no-repeat, url(../img/jpg/form/pattern.png) center center/cover no-repeat;
+  background: url(../img/form/leaf.png) right bottom 4.4444444444rem no-repeat, url(../img/form/bot-berry.png) left 2% bottom 4.4444444444rem no-repeat, url(../img/form/pattern.png) center center/cover no-repeat;
   color: #365a49;
 }
 @media screen and (max-width: 768px) {
   .section-form {
-    background: url(../img/jpg/form/pattern.png) center center/cover no-repeat;
+    background: url(../img/form/pattern.png) center center/cover no-repeat;
     color: #365a49;
   }
 }
 .section-form::before {
-  content: url(../img/jpg/form/top-berry.png);
+  content: url(../img/form/top-berry.png);
   position: absolute;
   right: -5rem;
   top: -9.3333333333rem;
@@ -280,7 +320,7 @@ img {
 
 .container-hero {
   height: 100%;
-  background: url(../img/jpg/decor/choch.png) right center/50% auto no-repeat;
+  background: url(../img/decor/choch.png) right center/50% auto no-repeat;
   justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
@@ -296,6 +336,7 @@ img {
 
 .container-slider {
   margin: 0 0.5555555556rem;
+  justify-content: center;
 }
 .container-slider .bx-wrapper {
   background: transparent;
@@ -319,82 +360,6 @@ img {
     flex-direction: column;
     align-items: center;
   }
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1.3333333333rem;
-  align-items: center;
-}
-
-.menu {
-  margin: 0 1.6666666667rem;
-}
-@media screen and (max-width: 768px) {
-  .menu {
-    display: none;
-  }
-}
-
-.menu__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.menu__item {
-  margin-right: 1.5rem;
-  margin-top: 0.5555555556rem;
-}
-.menu__item:last-child {
-  margin-right: 0;
-}
-
-.menu__link {
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.contacts {
-  flex-shrink: 0;
-}
-@media screen and (max-width: 768px) {
-  .contacts--header {
-    display: none;
-  }
-}
-@media screen and (max-width: 480px) {
-  .contacts--footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.contacts:hover {
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-}
-
-.contacts__phone {
-  font-style: normal;
-  text-decoration: none;
-}
-.contacts__phone--header {
-  font-size: 1.3333333333rem;
-  white-space: nowrap;
-}
-.contacts__phone--footer {
-  font-size: 1.1666666667rem;
-  color: #365a49;
-}
-
-.phone-icon {
-  width: 12px;
-  height: 12px;
-  fill: white;
-}
-.phone-icon--footer {
-  fill: #365a49;
 }
 
 .section-headline {
@@ -441,7 +406,7 @@ img {
     content: "";
     width: 80vw;
     height: 40vh;
-    background: url(../img/jpg/tablets/hero-bg.png) center center/contain no-repeat;
+    background: url(../img/tablets/hero-bg.png) center center/contain no-repeat;
   }
 }
 @media screen and (max-width: 480px) {
@@ -639,7 +604,7 @@ img {
   }
 }
 .reason-why::before {
-  content: url(../img/jpg/why-us/decor/sep.png);
+  content: url(../img/why-us/decor/sep.png);
   position: absolute;
   top: 3.3333333333rem;
   right: 0;
@@ -1252,7 +1217,7 @@ img {
 }
 
 .review {
-  background: url(../img/jpg/reviews/in-ornament.png) right top no-repeat;
+  background: url(../img/reviews/in-ornament.png) right top no-repeat;
   background-color: #f8faf9;
   display: flex;
   padding: 2.8333333333rem 10rem 1.9444444444rem 2.5555555556rem;
@@ -1388,14 +1353,14 @@ img {
 
 .video {
   margin: 0 auto;
-  width: 60%;
+  width: min(60%, 660px);
 }
 @media screen and (max-width: 768px) {
   .video {
-    width: 77%;
+    width: min(77%, 595px);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .video {
     width: 85%;
   }
@@ -1404,6 +1369,11 @@ img {
 .video__headline {
   margin-bottom: 50px;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .video__headline {
+    margin-bottom: 30px;
+  }
 }
 
 .player {
@@ -1441,8 +1411,8 @@ img {
   bottom: 0;
   background-color: #404040;
   height: 35px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 3%;
+  padding-right: 3%;
   display: flex;
   align-items: center;
   justify-content: space-between;

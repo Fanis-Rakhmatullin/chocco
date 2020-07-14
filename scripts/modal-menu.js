@@ -1,3 +1,4 @@
+(function () {
 // Модальное меню при клике на "гамбургер" - только для планшетов и телефонов.
 // Само меню работает на якорях каждой из секций страницы.
 
@@ -17,3 +18,5 @@ hamburger.addEventListener('click', function(evt) {
 modal.addEventListener('click', function(evt) {
   modal.style.display = 'none';
 })
+
+}());

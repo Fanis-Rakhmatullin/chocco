@@ -1,3 +1,4 @@
+(function () {
 $(document).ready(() => {
 
   const player = $('#video')[0];
@@ -93,7 +94,6 @@ $(document).ready(() => {
     });
 
     $('#video').on('play', (e) => {
-      console.log(e);
       currentVolume = e.target.volume;
       newButtonPositionPercent = currentVolume * 100;
 
@@ -104,3 +104,5 @@ $(document).ready(() => {
   }
   eventsInit();
 })
+
+}());

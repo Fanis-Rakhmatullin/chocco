@@ -102,7 +102,7 @@ img {
 }
 
 .section-hero {
-  background: url(../img/jpg/decor/ornament.png) right bottom no-repeat;
+  background: url(../img/decor/ornament.png) right bottom no-repeat;
   background-color: $blueBg;
   color: white;
   padding-bottom: rem(45px);
@@ -124,14 +124,14 @@ img {
   }
 
   &:before {
-    content: url(../img/jpg/decor/leaf.png);
+    content: url(../img/decor/leaf.png);
     position: absolute;
     bottom: rem(-40px);
     left: 2%;
   }
 
   &:after {
-    content: url(../img/jpg/decor/berries.png);
+    content: url(../img/decor/berries.png);
     position: absolute;
     bottom: rem(-40px);
     right: 0;
@@ -140,7 +140,7 @@ img {
 
 
 .section-why {
-  background: url(../img/jpg/why-us/decor/leaf-orn.png) left top 50% no-repeat;
+  background: url(../img/why-us/decor/leaf-orn.png) left top 50% no-repeat;
 
   @include tablets {
     background-position: left top 12%;
@@ -151,7 +151,7 @@ img {
   }
 
   &::before {
-    content: url(../img/jpg/why-us/decor/berry.png);
+    content: url(../img/why-us/decor/berry.png);
     position: absolute;
     left: 0;
     bottom: rem(-80px);
@@ -167,7 +167,7 @@ img {
   background-color: $paleBg;
 
   &::before {
-    content: url('../img/jpg/slider/berry.png');
+    content: url('../img/slider/berry.png');
     position: absolute;
     right: 0;
     bottom: -216px;
@@ -209,14 +209,14 @@ img {
 }
 
 .section-review {
-  background: url(../img/jpg/reviews/top-berries.png) right -6% top 9% no-repeat;
+  background: url(../img/reviews/top-berries.png) right -6% top 9% no-repeat;
 
   @include phones {
-    background: url(../img/jpg/reviews/top-berries.png) right -15% top 0% / 35% no-repeat;
+    background: url(../img/reviews/top-berries.png) right -15% top 0% / 35% no-repeat;
   }
 
   &::before {
-    content: url(../img/jpg/reviews/bot-berries.png);
+    content: url(../img/reviews/bot-berries.png);
     position: absolute;
     left: 0;
     bottom: rem(-154px);
@@ -236,21 +236,59 @@ img {
 
 .section-video {
   background-color: #f8faf9;
+
+  &::before {
+    content: url(../../img/player/leaf-top.png);
+    position: absolute;
+    right: 10%;
+    top: 15%;
+
+    @include tablets {
+      right: 3%;
+      top: 34%;
+      transform: scale(0.7);
+    }
+
+    @include phones {
+      right: -2%;
+      top: 32%;
+      transform: scale(0.7);
+    }
+  }
+
+  &::after {
+    content: url(../../img/player/leaf-bot.png);
+    position: absolute;
+    left: 7%;
+    bottom: 0;
+
+    @include tablets {
+      left: -1%;
+      bottom: 31%;
+      transform: scale(0.7);
+    }
+
+    @include phones {
+      left: -3%;
+      bottom: 19%;
+      transform: scale(0.7);
+    }
+  }
 }
 
 .section-form {
-  background: url(../img/jpg/form/leaf.png) right bottom rem(80px) no-repeat,
-    url(../img/jpg/form/bot-berry.png) left 2% bottom rem(80px) no-repeat,
-    url(../img/jpg/form/pattern.png) center center / cover no-repeat;
+  background: url(../img/form/leaf.png) right bottom rem(80px) no-repeat,
+    url(../img/form/bot-berry.png) left 2% bottom rem(80px) no-repeat,
+    url(../img/form/pattern.png) center center / cover no-repeat;
   color: $green;
 
   @include tablets {
-    background: url(../img/jpg/form/pattern.png) center center / cover no-repeat;
+    background: url(../img/form/pattern.png) center center / cover no-repeat;
     color: $green;
   }
 
   &::before {
-    content: url(../img/jpg/form/top-berry.png);
+    content: url(../img/form/top-berry.png);
     position: absolute;
     right: rem(-90px);
     top: rem(-168px);
@@ -277,7 +315,7 @@ img {
 
 .container-hero {
   height: 100%;
-  background: url(../img/jpg/decor/choch.png) right center / 50% auto no-repeat;
+  background: url(../img/decor/choch.png) right center / 50% auto no-repeat;
   justify-content: space-between;
 
   @include tablets {
@@ -292,6 +330,7 @@ img {
 
 .container-slider {
   margin: 0 rem(10px);
+  justify-content: center;
 
   .bx-wrapper {
     background: transparent;
@@ -315,5 +354,18 @@ img {
   @include phones {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+.section-headline {
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  line-height: 1.2;
+
+  @include phones {
+    font-size: rem(40px);
+    line-height: 1.1;
   }
 }

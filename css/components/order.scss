@@ -1,0 +1,62 @@
+.order {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+
+  @include tablets {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &::before {
+      content: "";
+      width: 80vw;
+      height: 40vh;
+      background: url(../img/tablets/hero-bg.png) center center / contain no-repeat;
+    }
+  }
+
+  @include phones {
+
+    &::before {
+      width: 60vw;
+      height: 30vh;
+    }
+  }
+}
+
+.order__headline {
+  color: white;
+  margin-bottom: rem(5px);
+  line-height: 1.2;
+
+  @include tablets {
+    margin-bottom: rem(20px);
+  }
+
+  @include phones {
+    font-size: rem(40px);
+    max-width: 90%;
+    margin-bottom: rem(8px);
+  }
+}
+
+.order__description {
+  font-size: rem(21px);
+  margin-bottom: rem(34px);
+  line-height: 1.2;
+
+  @include tablets {
+    padding: 0 25%;
+    margin-bottom: rem(26px);
+  }
+
+  @include phones {
+    padding: 0 15%;
+    font-size: rem(18px);
+  }
+}

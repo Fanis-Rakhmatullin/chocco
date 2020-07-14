@@ -1,3 +1,4 @@
+(function () {
 // Используетсябиблиотека bxSlider: https://bxslider.com/
 
 const slider = $('.slider__list').bxSlider({
@@ -12,3 +13,5 @@ $('.arrow-left').on('click', () => {
 $('.arrow-right').on('click', () => {
   slider.goToNextSlide();
 })
+
+}());

@@ -1,0 +1,21 @@
+.video {
+  margin: 0 auto;
+  width: min(60%, 660px);
+
+  @include tablets {
+    width: min(77%, 595px);
+  }
+
+  @include phones {
+    width: 85%;
+  }
+}
+
+.video__headline {
+  margin-bottom: 50px;
+  text-align: center;
+
+  @include tablets {
+    margin-bottom: 30px;
+  }
+}

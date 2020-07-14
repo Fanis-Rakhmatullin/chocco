@@ -1,0 +1,30 @@
+.social-nets__list {
+  display: flex;
+}
+
+.social-nets__item {
+  margin-right: rem(20px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-nets__link {
+  display: block;
+  text-decoration: none;
+  width: 23px;
+  height: 23px;
+  background: center center no-repeat;
+}
+
+.social-nets__icon {
+  width: rem(23px);
+  height: rem(23px);
+  fill: #b2b2b2;
+  transition: 0.3s;
+
+  &:hover {
+    fill: black;
+  }
+}
