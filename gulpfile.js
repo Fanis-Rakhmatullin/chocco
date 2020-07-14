@@ -33,31 +33,30 @@ task('copy:html', () => {
 
 task('styles', () => {
   return src([...STYLE_LIBS, 'src/css/main.scss'])
-    .pipe(gulpif(env === 'dev', sourcemaps.init()))
+    // .pipe(gulpif(env === 'dev', sourcemaps.init()))
     .pipe(concat('main.min.scss'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    // .pipe(pxrem())
-    .pipe(gulpif(env === 'prod', autoprefixer({
+    .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
-    })))
-    .pipe(gulpif(env === 'prod', gcmq()))
-    .pipe(gulpif(env === 'prod', cleanCSS()))
-    .pipe(gulpif(env === 'dev', sourcemaps.write()))
+    }))
+    .pipe(gcmq())
+    .pipe(cleanCSS())
+    // .pipe(gulpif(env === 'dev', sourcemaps.write()))
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }));
 });
 
 task('scripts', () => {
   return src([...JS_LIBS, 'src/scripts/*.js'])
-    .pipe(gulpif(env === 'dev', sourcemaps.init()))
+    // .pipe(gulpif(env === 'dev', sourcemaps.init()))
     .pipe(concat('main.min.js', { newLine: ';' }))
-    .pipe(gulpif(env === 'prod', babel({
+    .pipe(babel({
       presets: ['@babel/env']
-    })))
-    .pipe(gulpif(env === 'prod', uglify()))
-    .pipe(gulpif(env === 'dev', sourcemaps.write()))
+    }))
+    .pipe(uglify())
+    // .pipe(gulpif(env === 'dev', sourcemaps.write()))
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }));
 });
