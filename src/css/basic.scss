@@ -1,0 +1,51 @@
+// variables :
+
+  // background colors:
+  $blueBg: #86c3d7;
+  $paleBg: #f8faf9;
+// font-colors:
+  // color for btns and font in from section:
+  $green: #365a49;
+
+  // grey font color:
+  $grey: #666666;
+
+// pale color for outline in WHY section:
+  $pale2: #f3f5f3;
+
+
+$z-indexes: (
+'bg-items': 10,
+'interactive-avatar': 50,
+'btns': 50,
+'fixed-menu': 100,
+'modal-menu': 150
+);
+
+$baseFontSize: 18px;
+$containerWidth: 940px;
+
+// breakpoints
+$breakpoints: (
+'tablets': 768px,
+'phones': 480px,
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

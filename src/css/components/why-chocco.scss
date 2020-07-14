@@ -1,0 +1,58 @@
+.why-chocco {
+  @include phones {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+
+.why-chocco__highlight {
+  padding: 0 22%;
+  margin-bottom: 2.7777777778rem;
+  text-align: center;
+
+  @include phones {
+    padding: 0 8%;
+    margin-bottom: 2vh;
+    line-height: 1.1;
+  }
+}
+
+.why-chocco__desc {
+  color: $grey;
+}
+
+.why-chocco__list {
+  display: flex;
+  justify-content: space-between;
+
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+  }
+}
+
+.why-chocco__item {
+  padding-right: 7.5%;
+
+  @include phones {
+    padding-right: 0;
+    margin-bottom: 3vh;
+  }
+
+  &:last-child {
+    padding-right: 0;
+
+    @include phones {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
