@@ -85,8 +85,8 @@ $(document).ready(() => {
     });
     
     $('#video').on('volumechange', (e) => {
-      currentVolume = e.target.volume;
-      newButtonPositionPercent = currentVolume * 100;
+      const currentVolume = e.target.volume;
+      const newButtonPositionPercent = currentVolume * 100;
 
       $('.player__volume-point').css({
         left: `${newButtonPositionPercent}%`
@@ -94,8 +94,8 @@ $(document).ready(() => {
     });
 
     $('#video').on('play', (e) => {
-      currentVolume = e.target.volume;
-      newButtonPositionPercent = currentVolume * 100;
+      const currentVolume = e.target.volume;
+      const newButtonPositionPercent = currentVolume * 100;
 
       $('.player__volume-point').css({
         left: `${newButtonPositionPercent}%`
