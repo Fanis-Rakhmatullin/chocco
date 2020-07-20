@@ -4,8 +4,8 @@
   "description": "* HTML\r * CSS\r * SCSS",
   "main": "index.js",
   "scripts": {
-    "gulp": "cross-env NODE_ENV=dev gulp",
-    "build": "cross-env NODE_ENV=prod gulp build"
+    "gulp": "gulp",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,6 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-group-css-media-queries": "^1.2.2",
-    "gulp-if": "^3.0.0",
     "gulp-rm": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sass-glob": "^1.1.0",
