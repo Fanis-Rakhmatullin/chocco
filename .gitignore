@@ -1,3 +1,5 @@
 prepros.config
 node_modules
 dev
+.vscode
+.eslintrc.yml

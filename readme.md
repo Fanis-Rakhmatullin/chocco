@@ -1,13 +1,20 @@
-# Учебный проект курса веб - разработки 
+# CHOCCO
+## Учебный проект курса "Веб-разработка" школы Loft School.
 
-## Что использовалось при разработке:
-
+### Тема курса:
 * HTML
-* CSS 
-* SCSS
-* JavaScript
-* jQuery
-* npm + gulp
+* CSS / SCSS / Адаптивная верстка
+* JavaScript / jQuery
+* npm / gulp
+* Работа с формами / AJAX
+* Работа со сторонними API:
+  * HTMLMediaElement API
+  * YouTube IFrame Player API
+  * API Яндекс.Карт
+
+
+#### [Ссылка на GitHub Pages](https://fanis-rakhmatullin.github.io/CHOCCO/dist/)
+
 
 
 

@@ -1,17 +1,16 @@
 (function () {
 // Используетсябиблиотека bxSlider: https://bxslider.com/
 
-const slider = $('.slider__list').bxSlider({
-  pager: false, 
-  controls: false 
-});
+  const slider = $('.slider__list').bxSlider({
+    pager: false,
+    controls: false,
+  });
 
-$('.arrow-left').on('click', () => {
-  slider.goToPrevSlide();
-})
+  $('.arrow-left').on('click', () => {
+    slider.goToPrevSlide();
+  });
 
-$('.arrow-right').on('click', () => {
-  slider.goToNextSlide();
-})
-
+  $('.arrow-right').on('click', () => {
+    slider.goToNextSlide();
+  });
 }());
